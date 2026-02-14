@@ -29,7 +29,7 @@ La estructura general del proyecto se organiza así:
 Para clonar este proyecto desde Git:
 
 ```bash
-git clone https://github.com/AsolanoT/Grupo5.Ramirez.Solano_MD1.git
+https://github.com/AsolanoT/Grupo5.Ramirez.Solano_MD1.git
 ````
 
 # Autores – Grupo 5
