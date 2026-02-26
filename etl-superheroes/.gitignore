@@ -3,6 +3,3 @@ venv/
 
 # Variables de entorno
 .env
-data/
-logs/
-__pycache__/
