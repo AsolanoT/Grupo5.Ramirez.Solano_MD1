@@ -1,4 +1,77 @@
-requests==2.31.0
-pandas==2.2.2
-python-dotenv==1.0.0
-psycopg2-binary==2.9.11
+openpyxl==3.1.2
+
+# ===============================
+# 🔹 CORE ETL
+# ===============================
+
+requests==2.31.0          # Consumir API Superhero
+pandas==2.2.2             # Manipulación y transformación de datos
+python-dotenv==1.0.0      # Manejo de variables de entorno (.env)
+numpy==1.26.0             # Soporte matemático para análisis
+
+
+# ===============================
+# 🔹 VISUALIZACIÓN
+# ===============================
+
+matplotlib==3.8.0         # Gráficas básicas
+seaborn==0.13.0           # Visualización estadística avanzada
+plotly==5.18.0            # Gráficas interactivas para dashboard
+
+
+# ===============================
+# 🔹 BASE DE DATOS (PostgreSQL)
+# ===============================
+
+psycopg2-binary==2.9.9    # Conexión directa a PostgreSQL
+sqlalchemy==2.0.21        # ORM y manejo avanzado de base de datos
+
+
+# ===============================
+# 🔹 DASHBOARD
+# ===============================
+
+streamlit==1.28.0         # Dashboard interactivo
+streamlit-option-menu==0.3.6  # Menús avanzados para Streamlit
+
+
+# ===============================
+# 🔹 MACHINE LEARNING
+# ===============================
+
+scikit-learn==1.3.2       # Modelos ML (clasificación, regresión)
+xgboost==2.0.0            # Modelos avanzados de boosting
+joblib==1.3.2             # Guardar y cargar modelos entrenados
+
+
+# ===============================
+# 🔹 ANÁLISIS ESTADÍSTICO
+# ===============================
+
+scipy==1.11.3             # Estadística avanzada
+statsmodels==0.14.0       # Modelos estadísticos
+
+
+# ===============================
+# 🔹 JUPYTER (ML & análisis)
+# ===============================
+
+jupyter==1.0.0            # Notebook interactivo
+ipykernel==6.25.2         # Kernel para entorno virtual
+
+
+# ===============================
+# 🔹 EXPORTACIÓN Y ARCHIVOS
+# ===============================
+
+openpyxl==3.1.2           # Exportar a Excel
+xlsxwriter==3.1.9         # Excel avanzado
+python-pptx==0.6.23       # Generar presentaciones PPT automáticas
+
+
+# ===============================
+# 🔹 LOGGING Y UTILIDADES
+# ===============================
+
+loguru==0.7.2             # Logging avanzado
+tqdm==4.66.1              # Barras de progreso

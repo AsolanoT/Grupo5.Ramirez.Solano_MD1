@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%F0%9F%93%8A-miner%C3%ADa-de-datos-%E2%80%93-grupo-5">📊 Minería de Datos – Grupo 5</h1>
+<h2 id="proyecto-etl-y-an%C3%A1lisis-predictivo-de-superh%C3%A9roes">Proyecto ETL y Análisis Predictivo de Superhéroes</h2>
+<hr>
+<h1 id="%F0%9F%9A%80-clonar">🚀 Clonar</h1>
+<p>Para clonar este proyecto desde Git:</p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/AsolanoT/Grupo5.Ramirez.Solano_MD1.git
+</div></code></pre>
+<hr>
+<h1 id="%F0%9F%91%A5-autores-%E2%80%93-grupo-5">👥 Autores – Grupo 5</h1>
+<p><strong>Jordan Ramírez Gallego</strong>
+📧 <a href="mailto:jramirez-2023a@corhuila.edu.co">jramirez-2023a@corhuila.edu.co</a></p>
+<p><strong>Angel Gustavo Solano Trujillo</strong>
+📧 <a href="mailto:agsolano-2023a@corhuila.edu.co">agsolano-2023a@corhuila.edu.co</a></p>
+<hr>
+<h1 id="%F0%9F%93%8C-descripci%C3%B3n-del-proyecto">📌 Descripción del Proyecto</h1>
+<p>Este proyecto implementa un proceso <strong>ETL (Extract, Transform, Load)</strong> utilizando la API pública de SuperheroAPI para extraer información estructurada sobre superhéroes, incluyendo estadísticas de poder, afiliaciones y biografías.</p>
+<p>Los datos extraídos son procesados, almacenados en una base de datos PostgreSQL y posteriormente utilizados para análisis exploratorio, visualización interactiva y modelos de machine learning.</p>
+<p>API utilizada:
+<a href="https://superheroapi.com/">https://superheroapi.com/</a></p>
+<hr>
+<h1 id="%F0%9F%8E%AF-objetivo-del-proyecto">🎯 Objetivo del Proyecto</h1>
+<p>Desarrollar una arquitectura de datos completa que permita:</p>
+<ul>
+<li>Extraer información desde una API externa.</li>
+<li>Transformar y estructurar datos para análisis.</li>
+<li>Diseñar una base de datos optimizada en PostgreSQL.</li>
+<li>Implementar visualizaciones interactivas.</li>
+<li>Aplicar modelos de machine learning para análisis predictivo.</li>
+<li>Presentar resultados con métricas de evaluación y recomendaciones.</li>
+</ul>
+<hr>
+<h1 id="%F0%9F%93%82-descripci%C3%B3n-de-los-datos">📂 Descripción de los Datos</h1>
+<p>La API proporciona información detallada sobre superhéroes, incluyendo:</p>
+<ul>
+<li>
+<p>Nombre</p>
+</li>
+<li>
+<p>Editorial (Marvel, DC, etc.)</p>
+</li>
+<li>
+<p>Estadísticas de poder:</p>
+<ul>
+<li>Inteligencia</li>
+<li>Fuerza</li>
+<li>Velocidad</li>
+<li>Durabilidad</li>
+<li>Poder</li>
+<li>Combate</li>
+</ul>
+</li>
+<li>
+<p>Información biográfica</p>
+</li>
+<li>
+<p>Afiliaciones</p>
+</li>
+</ul>
+<p>Los valores de poder se encuentran en escala de 0 a 100.
+Algunos registros pueden contener valores faltantes (null), los cuales se tratan durante la fase de transformación o modelado.</p>
+<hr>
+<h1 id="%F0%9F%93%8F-alcance">📏 Alcance</h1>
+<p>El proyecto incluye:</p>
+<ul>
+<li>
+<p>Implementación de un extractor ETL con manejo de errores y logging.</p>
+</li>
+<li>
+<p>Almacenamiento estructurado en PostgreSQL.</p>
+</li>
+<li>
+<p>Dashboard interactivo en Streamlit.</p>
+</li>
+<li>
+<p>Análisis exploratorio de datos.</p>
+</li>
+<li>
+<p>Modelos de machine learning para:</p>
+<ul>
+<li>Clasificación de superhéroes por nivel de fortaleza.</li>
+<li>Predicción de valores faltantes.</li>
+<li>Agrupamiento por afiliación.</li>
+</ul>
+</li>
+<li>
+<p>Contenerización con Docker Compose.</p>
+</li>
+<li>
+<p>Documentación técnica y presentación ejecutiva.</p>
+</li>
+</ul>
+<p>No incluye entrenamiento en tiempo real ni integración con APIs privadas.</p>
+<hr>
+<h1 id="%F0%9F%9B%A0-herramientas">🛠 Herramientas</h1>
+<p>Las herramientas empleadas en este proyecto incluyen:</p>
+<ul>
+<li><strong>VS Code</strong> – Entorno de desarrollo</li>
+<li><strong>Python</strong> – Lenguaje principal</li>
+<li><strong>WSL</strong> – Entorno Linux en Windows</li>
+<li><strong>PostgreSQL</strong> – Base de datos relacional</li>
+<li><strong>Docker &amp; Docker Compose</strong> – Orquestación de contenedores</li>
+<li><strong>Streamlit</strong> – Dashboard interactivo</li>
+<li><strong>Scikit-Learn</strong> – Modelos de machine learning</li>
+<li><strong>Pandas &amp; NumPy</strong> – Procesamiento de datos</li>
+<li><strong>Matplotlib / Seaborn / Plotly</strong> – Visualización</li>
+</ul>
+<hr>
+<h1 id="%F0%9F%92%A1-soluci%C3%B3n">💡 Solución</h1>
+<p>Se diseñó una arquitectura modular compuesta por:</p>
+<ol>
+<li>
+<p><strong>Extractor ETL</strong></p>
+<ul>
+<li>Consume la API.</li>
+<li>Maneja errores.</li>
+<li>Registra logs.</li>
+<li>Genera archivos CSV y JSON.</li>
+</ul>
+</li>
+<li>
+<p><strong>Base de Datos PostgreSQL</strong></p>
+<ul>
+<li>Diseño relacional optimizado.</li>
+<li>Inserción estructurada de datos.</li>
+<li>Consultas analíticas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dashboard Streamlit</strong></p>
+<ul>
+<li>Visualización interactiva de estadísticas.</li>
+<li>Filtros por editorial.</li>
+<li>Comparaciones entre héroes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Machine Learning</strong></p>
+<ul>
+<li>Clasificación de fortaleza.</li>
+<li>Regresión para predicción de poder faltante.</li>
+<li>Clustering por características similares.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="%F0%9F%8F%97-arquitectura-de-datos">🏗 Arquitectura de Datos</h1>
+<pre class="hljs"><code><div>Superhero API
+       ↓
+Extractor ETL
+       ↓
+Transformación
+       ↓
+PostgreSQL
+       ↓
+Dashboard + ML
+</div></code></pre>
+<hr>
+<h1 id="%F0%9F%93%81-estructura-del-proyecto">📁 Estructura del Proyecto</h1>
+<pre class="hljs"><code><div>etl-superheroes/
+├── data/
+├── logs/
+├── scripts/
+│   ├── extractor.py
+│   ├── transformador.py
+│   ├── visualizador.py
+├── notebooks/
+├── docker-compose.yml
+├── requirements.txt
+├── README.md
+└── .env
+</div></code></pre>
+<hr>
+<h1 id="%F0%9F%93%8A-an%C3%A1lisis-propuestos">📊 Análisis Propuestos</h1>
+<ul>
+<li>Distribución de poderes.</li>
+<li>Clasificación de superhéroes por fortaleza.</li>
+<li>Predicción de poder faltante mediante regresión.</li>
+<li>Agrupamiento por afiliación utilizando clustering.</li>
+<li>Comparación estadística entre editoriales.</li>
+</ul>
+
+</body>
+</html>
