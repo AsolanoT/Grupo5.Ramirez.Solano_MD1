@@ -1,0 +1,8 @@
+2026-02-26 13:04:24,151 - INFO - Iniciando extracción para 5 ciudades...
+2026-02-26 13:04:25,006 - INFO - ✅ Datos extraídos para Bogota
+2026-02-26 13:04:25,319 - ERROR - ❌ Error extrayendo datos para Medellin: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Medellin
+2026-02-26 13:04:25,650 - ERROR - ❌ Error extrayendo datos para Cali: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Cali
+2026-02-26 13:04:26,241 - INFO - ✅ Datos extraídos para Barranquilla
+2026-02-26 13:04:26,576 - ERROR - ❌ Error extrayendo datos para Cartagena: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Cartagena
+2026-02-26 13:04:26,578 - INFO - 📁 Datos guardados en data/clima_raw.json
+2026-02-26 13:04:26,587 - INFO - 📁 Datos guardados en data/clima.csv

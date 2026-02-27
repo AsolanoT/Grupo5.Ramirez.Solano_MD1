@@ -1,0 +1,8 @@
+# Entorno virtual
+venv/
+
+# Variables de entorno (todas las carpetas)
+.env
+**/.env
+*.env
+**/*.env

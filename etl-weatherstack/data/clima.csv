@@ -1,0 +1,3 @@
+ciudad,pais,latitud,longitud,temperatura,sensacion_termica,humedad,velocidad_viento,descripcion,fecha_extraccion,codigo_tiempo
+Bogota,Colombia,4.600,-74.083,20,20,46,5,Partly cloudy,2026-02-26T13:04:25.007494,116
+Barranquilla,Colombia,10.964,-74.796,32,38,59,25,Sunny,2026-02-26T13:04:26.242778,113

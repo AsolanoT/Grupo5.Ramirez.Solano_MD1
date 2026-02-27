@@ -1,0 +1,112 @@
+[
+  {
+    "nombre": "A-Bomb",
+    "inteligencia": "38",
+    "fuerza": "100",
+    "velocidad": "17",
+    "durabilidad": "80",
+    "poder": "24",
+    "combate": "64",
+    "editorial": "Marvel Comics",
+    "fecha_extraccion": "2026-02-26T16:59:21.326438"
+  },
+  {
+    "nombre": "Abe Sapien",
+    "inteligencia": "88",
+    "fuerza": "28",
+    "velocidad": "35",
+    "durabilidad": "65",
+    "poder": "100",
+    "combate": "85",
+    "editorial": "Dark Horse Comics",
+    "fecha_extraccion": "2026-02-26T16:59:22.111398"
+  },
+  {
+    "nombre": "Abin Sur",
+    "inteligencia": "50",
+    "fuerza": "90",
+    "velocidad": "53",
+    "durabilidad": "64",
+    "poder": "99",
+    "combate": "65",
+    "editorial": "DC Comics",
+    "fecha_extraccion": "2026-02-26T16:59:23.051663"
+  },
+  {
+    "nombre": "Abomination",
+    "inteligencia": "63",
+    "fuerza": "80",
+    "velocidad": "53",
+    "durabilidad": "90",
+    "poder": "62",
+    "combate": "95",
+    "editorial": "Marvel Comics",
+    "fecha_extraccion": "2026-02-26T16:59:23.845082"
+  },
+  {
+    "nombre": "Abraxas",
+    "inteligencia": "88",
+    "fuerza": "63",
+    "velocidad": "83",
+    "durabilidad": "100",
+    "poder": "100",
+    "combate": "55",
+    "editorial": "Marvel Comics",
+    "fecha_extraccion": "2026-02-26T16:59:24.789515"
+  },
+  {
+    "nombre": "Absorbing Man",
+    "inteligencia": "38",
+    "fuerza": "80",
+    "velocidad": "25",
+    "durabilidad": "100",
+    "poder": "98",
+    "combate": "64",
+    "editorial": "Marvel Comics",
+    "fecha_extraccion": "2026-02-26T16:59:25.576693"
+  },
+  {
+    "nombre": "Adam Monroe",
+    "inteligencia": "63",
+    "fuerza": "10",
+    "velocidad": "12",
+    "durabilidad": "100",
+    "poder": "100",
+    "combate": "64",
+    "editorial": "NBC - Heroes",
+    "fecha_extraccion": "2026-02-26T16:59:26.205563"
+  },
+  {
+    "nombre": "Adam Strange",
+    "inteligencia": "69",
+    "fuerza": "10",
+    "velocidad": "33",
+    "durabilidad": "40",
+    "poder": "37",
+    "combate": "50",
+    "editorial": "DC Comics",
+    "fecha_extraccion": "2026-02-26T16:59:27.008758"
+  },
+  {
+    "nombre": "Agent 13",
+    "inteligencia": "null",
+    "fuerza": "46",
+    "velocidad": "null",
+    "durabilidad": "null",
+    "poder": "null",
+    "combate": "null",
+    "editorial": "Sharon Carter",
+    "fecha_extraccion": "2026-02-26T16:59:27.797077"
+  },
+  {
+    "nombre": "Agent Bob",
+    "inteligencia": "10",
+    "fuerza": "8",
+    "velocidad": "13",
+    "durabilidad": "5",
+    "poder": "5",
+    "combate": "20",
+    "editorial": "Marvel Comics",
+    "fecha_extraccion": "2026-02-26T16:59:28.480874"
+  }
+]
