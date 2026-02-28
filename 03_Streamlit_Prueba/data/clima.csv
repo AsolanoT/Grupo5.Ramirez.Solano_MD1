@@ -1,3 +1,4 @@
 ciudad,pais,latitud,longitud,temperatura,sensacion_termica,humedad,velocidad_viento,descripcion,fecha_extraccion,codigo_tiempo
-Bogota,Colombia,4.600,-74.083,18,18,73,7,Shower In Vicinity,2026-02-27T19:21:59.280467,122
+Bogota,Colombia,4.600,-74.083,17,17,88,6,Shower In Vicinity,2026-02-28T17:56:15.781189,122
+Barranquilla,Colombia,10.964,-74.796,29,34,70,30,Sunny,2026-02-28T17:56:17.058711,113
 Cali,Colombia,3.437,-76.523,27,31,66,8,Partly cloudy,2026-02-27T19:22:00.336017,116
