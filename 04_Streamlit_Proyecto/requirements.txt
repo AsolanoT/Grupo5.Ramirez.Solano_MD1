@@ -1,0 +1,30 @@
+# ===============================
+# 🔹 CORE ETL
+# ===============================
+
+requests==2.31.0          # Consumir APIs externas
+pandas==2.2.0             # Manipulación y transformación de datos
+python-dotenv==1.0.0      # Manejo de variables de entorno (.env)
+numpy==1.26.4             # Soporte matemático para análisis
+
+# ===============================
+# 📊 VISUALIZACIÓN
+# ===============================
+
+matplotlib==3.8.0         # Gráficos estáticos
+plotly==5.17.0            # Gráficos interactivos
+
+# ===============================
+# 💾 BASE DE DATOS
+# ===============================
+
+psycopg2-binary==2.9.9    # Driver PostgreSQL
+sqlalchemy==2.0.23        # ORM y queries SQL
+alembic==1.12.1           # Migraciones de base de datos
+
+# ===============================
+# 📱 APLICACIÓN WEB
+# ===============================
+
+streamlit==1.28.1         # Framework web interactivo
+openpyxl==3.1.2           # Lectura/escritura de archivos Excel
