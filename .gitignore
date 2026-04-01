@@ -2,10 +2,10 @@
 venv/
 
 # Variables de entorno (todas las carpetas)
-.env
-**/.env
-*.env
-**/*.env
+# .env
+# **/.env
+# *.env
+# **/*.env
 
 # Streamlit secrets
 .streamlit/secrets.toml
