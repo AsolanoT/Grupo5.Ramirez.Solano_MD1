@@ -1,0 +1,174 @@
+#!/usr/bin/env python3
+"""
+demo_to_local_and_supabase.py
+--------------------------------------------------
+Genera EXACTAMENTE 1000 registros sintéticos de clima
+y los guarda tanto en:
+
+1. PostgreSQL LOCAL
+2. PostgreSQL SUPABASE (bulk insert)
+
+NO usa API.
+Pipeline DEMO completo.
+--------------------------------------------------
+"""
+
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+import numpy as np
+from datetime import datetime, timedelta, timezone
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+from scripts.database import SessionLocal  # BD LOCAL
+from scripts.models import Ciudad, RegistroClima
+
+# ===============================
+# CONFIG SUPABASE
+# ===============================
+SUPABASE_URL = (
+    "postgresql+psycopg2://"
+    "postgres.cwhrrhnunvrmbitxqveq:"
+    "weatherstack_Etl_Corhuila@"
+    "aws-1-us-east-1.pooler.supabase.com:6543/postgres"
+)
+
+engine_supabase = create_engine(
+    SUPABASE_URL,
+    connect_args={"sslmode": "require"}
+)
+
+SessionSupabase = sessionmaker(bind=engine_supabase)
+
+# ===============================
+# CONFIG DEMO
+# ===============================
+random = np.random.default_rng(seed=42)
+TOTAL_REGISTROS = 1000
+
+CIUDADES = [
+    {"nombre": "Bogotá", "pais": "Colombia", "lat": 4.711, "lon": -74.0721, "temp": 14},
+    {"nombre": "Medellín", "pais": "Colombia", "lat": 6.2442, "lon": -75.5812, "temp": 22},
+    {"nombre": "Cali", "pais": "Colombia", "lat": 3.4516, "lon": -76.5320, "temp": 26},
+    {"nombre": "Barranquilla", "pais": "Colombia", "lat": 10.9685, "lon": -74.7813, "temp": 29},
+    {"nombre": "Cartagena", "pais": "Colombia", "lat": 10.3910, "lon": -75.4794, "temp": 30},
+]
+
+DESCRIPCIONES = [
+    "Despejado",
+    "Parcialmente nublado",
+    "Nublado",
+    "Lluvia ligera",
+    "Tormenta"
+]
+
+# ===============================
+# PROCESO PRINCIPAL
+# ===============================
+def generar_y_guardar():
+    db_local = SessionLocal()
+    db_supabase = SessionSupabase()
+
+    try:
+        print("🚀 Generando datos DEMO...")
+
+        registros_por_ciudad = TOTAL_REGISTROS // len(CIUDADES)
+        inicio = datetime.now(timezone.utc) - timedelta(days=7)
+
+        ciudad_map_local = {}
+        ciudad_map_supabase = {}
+
+        # -------- Crear ciudades en AMBAS BD
+        for c in CIUDADES:
+            # LOCAL
+            ciudad_local = db_local.query(Ciudad).filter_by(nombre=c["nombre"]).first()
+            if not ciudad_local:
+                ciudad_local = Ciudad(
+                    nombre=c["nombre"],
+                    pais=c["pais"],
+                    latitud=c["lat"],
+                    longitud=c["lon"]
+                )
+                db_local.add(ciudad_local)
+                db_local.flush()
+            ciudad_map_local[c["nombre"]] = ciudad_local.id
+
+            # SUPABASE
+            ciudad_sb = db_supabase.query(Ciudad).filter_by(nombre=c["nombre"]).first()
+            if not ciudad_sb:
+                ciudad_sb = Ciudad(
+                    nombre=c["nombre"],
+                    pais=c["pais"],
+                    latitud=c["lat"],
+                    longitud=c["lon"]
+                )
+                db_supabase.add(ciudad_sb)
+                db_supabase.flush()
+            ciudad_map_supabase[c["nombre"]] = ciudad_sb.id
+
+        db_local.commit()
+        db_supabase.commit()
+
+        # -------- Generar registros
+        registros_local = []
+        registros_supabase = []
+        fecha = inicio
+        total = 0
+
+        for c in CIUDADES:
+            for _ in range(registros_por_ciudad):
+                temperatura = c["temp"] + random.normal(0, 2)
+
+                base_kwargs = dict(
+                    temperatura=round(temperatura, 1),
+                    sensacion_termica=round(temperatura + random.normal(0, 1), 1),
+                    humedad=round(min(100, max(40, 70 + random.normal(0, 5))), 1),
+                    velocidad_viento=round(max(0, random.normal(12, 3)), 1),
+                    descripcion=random.choice(DESCRIPCIONES),
+                    codigo_tiempo=int(random.integers(100, 900)),
+                    fecha_extraccion=fecha
+                )
+
+                registros_local.append(
+                    RegistroClima(
+                        ciudad_id=ciudad_map_local[c["nombre"]],
+                        **base_kwargs
+                    )
+                )
+
+                registros_supabase.append(
+                    RegistroClima(
+                        ciudad_id=ciudad_map_supabase[c["nombre"]],
+                        **base_kwargs
+                    )
+                )
+
+                fecha += timedelta(minutes=10)
+                total += 1
+
+        # -------- Bulk insert
+        db_local.bulk_save_objects(registros_local)
+        db_supabase.bulk_save_objects(registros_supabase)
+
+        db_local.commit()
+        db_supabase.commit()
+
+        print(f"✅ {total} registros DEMO guardados en BD LOCAL y SUPABASE")
+
+    except Exception as e:
+        db_local.rollback()
+        db_supabase.rollback()
+        print("❌ Error:", e)
+
+    finally:
+        db_local.close()
+        db_supabase.close()
+
+
+# ===============================
+# MAIN
+# ===============================
+if __name__ == "__main__":
+    generar_y_guardar()

@@ -100,7 +100,13 @@ if not df.empty:
     st.markdown("### 📊 Indicadores Clave")
     
     col1, col2, col3, col4, col5 = st.columns(5)
-    
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
+
+    with col6:
+        st.metric(
+            "📊 Total Registros",
+            len(df)
+        )
     with col1:
         st.metric(
             "🌡️ Temp Max",
