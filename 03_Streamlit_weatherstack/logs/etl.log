@@ -1,0 +1,18 @@
+2026-04-03 22:01:41,685 - INFO - Procesado: Bogota
+2026-04-03 22:01:42,881 - INFO - Procesado: Medellin
+2026-04-03 22:01:43,937 - INFO - Procesado: Cali
+2026-04-03 22:01:44,856 - INFO - Procesado: Barranquilla
+2026-04-03 22:01:45,209 - ERROR - Error extrayendo Cartagena: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Cartagena
+2026-04-03 22:01:45,411 - INFO - ✅ ETL completado (LOCAL + SUPABASE)
+2026-04-03 22:05:27,895 - INFO - Procesado: Bogota
+2026-04-03 22:05:28,477 - INFO - Procesado: Medellin
+2026-04-03 22:05:28,830 - ERROR - Error extrayendo Cali: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Cali
+2026-04-03 22:05:29,163 - ERROR - Error extrayendo Barranquilla: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Barranquilla
+2026-04-03 22:05:29,871 - INFO - Procesado: Cartagena
+2026-04-03 22:05:30,082 - INFO - ✅ ETL completado (LOCAL + SUPABASE)
+2026-04-03 22:12:06,202 - INFO - Procesado: Bogota
+2026-04-03 22:12:07,046 - INFO - Procesado: Medellin
+2026-04-03 22:12:07,393 - ERROR - Error extrayendo Cali: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Cali
+2026-04-03 22:12:08,120 - INFO - Procesado: Barranquilla
+2026-04-03 22:12:08,478 - ERROR - Error extrayendo Cartagena: 429 Client Error: Too Many Requests for url: https://api.weatherstack.com/current?access_key=f7ffc8ef09528c6629869e249c9c307a&query=Cartagena
+2026-04-03 22:12:08,994 - INFO - ✅ ETL completado (LOCAL + SUPABASE)
