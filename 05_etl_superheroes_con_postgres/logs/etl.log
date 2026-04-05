@@ -1,0 +1,721 @@
+2026-04-04 21:44:46,936 - INFO - 🚀 Iniciando ETL para 49 superhéroes
+2026-04-04 21:44:50,922 - INFO - ✅ Datos guardados para Agent 13
+2026-04-04 21:44:54,065 - INFO - ✅ Datos guardados para K-2SO
+2026-04-04 21:44:55,627 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 44, 55, 621862)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:44:56,292 - WARNING - ⚠️ Héroe no encontrado: 4
+2026-04-04 21:44:59,230 - ERROR - ❌ Error guardando datos: (psycopg2.errors.StringDataRightTruncation) value too long for type character varying(200)
+
+[SQL: INSERT INTO superheroes (superhero_api_id, nombre, nombre_real, editorial, alineacion, lugar_nacimiento, primera_aparicion, fecha_creacion, activo) VALUES (%(superhero_api_id)s, %(nombre)s, %(nombre_real)s, %(editorial)s, %(alineacion)s, %(lugar_nacimiento)s, %(primera_aparicion)s, %(fecha_creacion)s, %(activo)s) RETURNING superheroes.id]
+[parameters: {'superhero_api_id': 137, 'nombre': 'Brainiac 5', 'nombre_real': 'Querl Dox', 'editorial': 'DC Comics', 'alineacion': 'good', 'lugar_nacimiento': '-', 'primera_aparicion': "Brainiac 5's primary invention is his personal force-shield generator. Brainiac 5 re-discovered the technical process behind original Brainiac's force-shield belt, which is capable of generating a virtually impervious field of protection. The belt must be", 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 44, 59, 226553), 'activo': True}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-04-04 21:44:59,932 - WARNING - ⚠️ Héroe no encontrado: 6
+2026-04-04 21:45:00,662 - WARNING - ⚠️ Héroe no encontrado: 7
+2026-04-04 21:45:06,963 - ERROR - ❌ Error buscando héroe 8: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2026-04-04 21:45:07,966 - WARNING - ⚠️ Héroe no encontrado: 9
+2026-04-04 21:45:11,382 - INFO - ✅ Datos guardados para Ben 10
+2026-04-04 21:45:14,540 - INFO - ✅ Datos guardados para Kevin 11
+2026-04-04 21:45:15,264 - WARNING - ⚠️ Héroe no encontrado: 12
+2026-04-04 21:45:18,228 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 45, 18, 227949)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:45:18,970 - WARNING - ⚠️ Héroe no encontrado: 14
+2026-04-04 21:45:19,727 - WARNING - ⚠️ Héroe no encontrado: 15
+2026-04-04 21:45:20,443 - WARNING - ⚠️ Héroe no encontrado: 16
+2026-04-04 21:45:21,153 - WARNING - ⚠️ Héroe no encontrado: 17
+2026-04-04 21:45:21,861 - WARNING - ⚠️ Héroe no encontrado: 18
+2026-04-04 21:45:22,586 - WARNING - ⚠️ Héroe no encontrado: 19
+2026-04-04 21:45:23,293 - WARNING - ⚠️ Héroe no encontrado: 20
+2026-04-04 21:45:22,349 - WARNING - ⚠️ Héroe no encontrado: 21
+2026-04-04 21:45:23,021 - WARNING - ⚠️ Héroe no encontrado: 22
+2026-04-04 21:45:26,829 - INFO - ✅ Datos guardados para X-23
+2026-04-04 21:45:27,530 - WARNING - ⚠️ Héroe no encontrado: 24
+2026-04-04 21:45:28,271 - WARNING - ⚠️ Héroe no encontrado: 25
+2026-04-04 21:45:29,143 - WARNING - ⚠️ Héroe no encontrado: 26
+2026-04-04 21:45:29,840 - WARNING - ⚠️ Héroe no encontrado: 27
+2026-04-04 21:45:30,650 - WARNING - ⚠️ Héroe no encontrado: 28
+2026-04-04 21:45:31,352 - WARNING - ⚠️ Héroe no encontrado: 29
+2026-04-04 21:45:32,103 - WARNING - ⚠️ Héroe no encontrado: 30
+2026-04-04 21:45:32,924 - WARNING - ⚠️ Héroe no encontrado: 31
+2026-04-04 21:45:33,649 - WARNING - ⚠️ Héroe no encontrado: 32
+2026-04-04 21:45:34,387 - WARNING - ⚠️ Héroe no encontrado: 33
+2026-04-04 21:45:35,062 - WARNING - ⚠️ Héroe no encontrado: 34
+2026-04-04 21:45:35,752 - WARNING - ⚠️ Héroe no encontrado: 35
+2026-04-04 21:45:36,466 - WARNING - ⚠️ Héroe no encontrado: 36
+2026-04-04 21:45:37,213 - WARNING - ⚠️ Héroe no encontrado: 37
+2026-04-04 21:45:37,961 - WARNING - ⚠️ Héroe no encontrado: 38
+2026-04-04 21:45:38,667 - WARNING - ⚠️ Héroe no encontrado: 39
+2026-04-04 21:45:39,934 - WARNING - ⚠️ Héroe no encontrado: 40
+2026-04-04 21:45:40,669 - WARNING - ⚠️ Héroe no encontrado: 41
+2026-04-04 21:45:41,384 - WARNING - ⚠️ Héroe no encontrado: 42
+2026-04-04 21:45:42,369 - WARNING - ⚠️ Héroe no encontrado: 43
+2026-04-04 21:45:43,065 - WARNING - ⚠️ Héroe no encontrado: 44
+2026-04-04 21:45:43,772 - WARNING - ⚠️ Héroe no encontrado: 45
+2026-04-04 21:45:44,514 - WARNING - ⚠️ Héroe no encontrado: 46
+2026-04-04 21:45:45,226 - WARNING - ⚠️ Héroe no encontrado: 47
+2026-04-04 21:45:46,468 - WARNING - ⚠️ Héroe no encontrado: 48
+2026-04-04 21:45:47,194 - WARNING - ⚠️ Héroe no encontrado: 49
+2026-04-04 21:45:47,207 - INFO - 📊 Métricas ETL guardadas
+2026-04-04 21:47:45,618 - INFO - 🚀 Iniciando ETL para 50 superhéroes
+2026-04-04 21:47:49,323 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 47, 49, 321489)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:47:52,323 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(2) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 2, 'genero': 'Male', 'raza': 'Android', 'altura': "7'0,213 cm", 'peso': '- lb,0 kg', 'color_ojos': 'White', 'color_cabello': 'No Hair', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 47, 52, 320279)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:47:55,375 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 47, 55, 374061)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:47:56,059 - WARNING - ⚠️ Héroe no encontrado: 4
+2026-04-04 21:47:58,987 - ERROR - ❌ Error guardando datos: (psycopg2.errors.StringDataRightTruncation) value too long for type character varying(200)
+
+[SQL: INSERT INTO superheroes (superhero_api_id, nombre, nombre_real, editorial, alineacion, lugar_nacimiento, primera_aparicion, fecha_creacion, activo) VALUES (%(superhero_api_id)s, %(nombre)s, %(nombre_real)s, %(editorial)s, %(alineacion)s, %(lugar_nacimiento)s, %(primera_aparicion)s, %(fecha_creacion)s, %(activo)s) RETURNING superheroes.id]
+[parameters: {'superhero_api_id': 137, 'nombre': 'Brainiac 5', 'nombre_real': 'Querl Dox', 'editorial': 'DC Comics', 'alineacion': 'good', 'lugar_nacimiento': '-', 'primera_aparicion': "Brainiac 5's primary invention is his personal force-shield generator. Brainiac 5 re-discovered the technical process behind original Brainiac's force-shield belt, which is capable of generating a virtually impervious field of protection. The belt must be", 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 47, 58, 981210), 'activo': True}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-04-04 21:47:59,695 - WARNING - ⚠️ Héroe no encontrado: 6
+2026-04-04 21:48:00,537 - WARNING - ⚠️ Héroe no encontrado: 7
+2026-04-04 21:48:03,547 - INFO - ✅ Datos guardados para T-800
+2026-04-04 21:48:04,267 - WARNING - ⚠️ Héroe no encontrado: 9
+2026-04-04 21:48:07,151 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(3) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 3, 'genero': 'Male', 'raza': 'null', 'altura': '-,0 cm', 'peso': '- lb,0 kg', 'color_ojos': '-', 'color_cabello': '-', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 48, 7, 149828)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:48:09,877 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(4) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 4, 'genero': 'Male', 'raza': 'Human', 'altura': '-,0 cm', 'peso': '- lb,0 kg', 'color_ojos': '-', 'color_cabello': 'Black', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 48, 9, 876624)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:48:10,563 - WARNING - ⚠️ Héroe no encontrado: 12
+2026-04-04 21:48:13,386 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 48, 13, 384465)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:48:13,324 - WARNING - ⚠️ Héroe no encontrado: 14
+2026-04-04 21:48:13,066 - WARNING - ⚠️ Héroe no encontrado: 15
+2026-04-04 21:48:13,774 - WARNING - ⚠️ Héroe no encontrado: 16
+2026-04-04 21:48:14,457 - WARNING - ⚠️ Héroe no encontrado: 17
+2026-04-04 21:48:15,116 - WARNING - ⚠️ Héroe no encontrado: 18
+2026-04-04 21:48:16,833 - WARNING - ⚠️ Héroe no encontrado: 19
+2026-04-04 21:48:17,557 - WARNING - ⚠️ Héroe no encontrado: 20
+2026-04-04 21:48:18,221 - WARNING - ⚠️ Héroe no encontrado: 21
+2026-04-04 21:48:18,910 - WARNING - ⚠️ Héroe no encontrado: 22
+2026-04-04 21:48:21,628 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(5) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 5, 'genero': 'Female', 'raza': 'Mutant / Clone', 'altura': "5'1,155 cm", 'peso': '110 lb,50 kg', 'color_ojos': 'Green', 'color_cabello': 'Black', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 48, 21, 627090)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:48:22,335 - WARNING - ⚠️ Héroe no encontrado: 24
+2026-04-04 21:48:23,019 - WARNING - ⚠️ Héroe no encontrado: 25
+2026-04-04 21:48:23,730 - WARNING - ⚠️ Héroe no encontrado: 26
+2026-04-04 21:48:24,435 - WARNING - ⚠️ Héroe no encontrado: 27
+2026-04-04 21:48:25,133 - WARNING - ⚠️ Héroe no encontrado: 28
+2026-04-04 21:48:25,831 - WARNING - ⚠️ Héroe no encontrado: 29
+2026-04-04 21:48:26,570 - WARNING - ⚠️ Héroe no encontrado: 30
+2026-04-04 21:48:27,256 - WARNING - ⚠️ Héroe no encontrado: 31
+2026-04-04 21:48:27,936 - WARNING - ⚠️ Héroe no encontrado: 32
+2026-04-04 21:48:28,608 - WARNING - ⚠️ Héroe no encontrado: 33
+2026-04-04 21:48:29,293 - WARNING - ⚠️ Héroe no encontrado: 34
+2026-04-04 21:48:29,978 - WARNING - ⚠️ Héroe no encontrado: 35
+2026-04-04 21:48:30,690 - WARNING - ⚠️ Héroe no encontrado: 36
+2026-04-04 21:48:31,347 - WARNING - ⚠️ Héroe no encontrado: 37
+2026-04-04 21:48:32,026 - WARNING - ⚠️ Héroe no encontrado: 38
+2026-04-04 21:48:32,697 - WARNING - ⚠️ Héroe no encontrado: 39
+2026-04-04 21:48:33,393 - WARNING - ⚠️ Héroe no encontrado: 40
+2026-04-04 21:48:34,120 - WARNING - ⚠️ Héroe no encontrado: 41
+2026-04-04 21:48:34,818 - WARNING - ⚠️ Héroe no encontrado: 42
+2026-04-04 21:48:35,572 - WARNING - ⚠️ Héroe no encontrado: 43
+2026-04-04 21:48:36,284 - WARNING - ⚠️ Héroe no encontrado: 44
+2026-04-04 21:48:36,963 - WARNING - ⚠️ Héroe no encontrado: 45
+2026-04-04 21:48:37,641 - WARNING - ⚠️ Héroe no encontrado: 46
+2026-04-04 21:48:38,343 - WARNING - ⚠️ Héroe no encontrado: 47
+2026-04-04 21:48:39,005 - WARNING - ⚠️ Héroe no encontrado: 48
+2026-04-04 21:48:39,703 - WARNING - ⚠️ Héroe no encontrado: 49
+2026-04-04 21:48:40,465 - WARNING - ⚠️ Héroe no encontrado: 
+2026-04-04 21:48:40,476 - INFO - 📊 Métricas ETL guardadas
+2026-04-04 21:49:10,034 - INFO - 🚀 Iniciando ETL para 244 superhéroes
+2026-04-04 21:49:12,194 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 12, 189146)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:14,962 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(2) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 2, 'genero': 'Male', 'raza': 'Android', 'altura': "7'0,213 cm", 'peso': '- lb,0 kg', 'color_ojos': 'White', 'color_cabello': 'No Hair', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 14, 960403)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:17,673 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 17, 671922)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:18,353 - WARNING - ⚠️ Héroe no encontrado: 4
+2026-04-04 21:49:22,106 - ERROR - ❌ Error guardando datos: (psycopg2.errors.StringDataRightTruncation) value too long for type character varying(200)
+
+[SQL: INSERT INTO superheroes (superhero_api_id, nombre, nombre_real, editorial, alineacion, lugar_nacimiento, primera_aparicion, fecha_creacion, activo) VALUES (%(superhero_api_id)s, %(nombre)s, %(nombre_real)s, %(editorial)s, %(alineacion)s, %(lugar_nacimiento)s, %(primera_aparicion)s, %(fecha_creacion)s, %(activo)s) RETURNING superheroes.id]
+[parameters: {'superhero_api_id': 137, 'nombre': 'Brainiac 5', 'nombre_real': 'Querl Dox', 'editorial': 'DC Comics', 'alineacion': 'good', 'lugar_nacimiento': '-', 'primera_aparicion': "Brainiac 5's primary invention is his personal force-shield generator. Brainiac 5 re-discovered the technical process behind original Brainiac's force-shield belt, which is capable of generating a virtually impervious field of protection. The belt must be", 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 22, 104072), 'activo': True}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-04-04 21:49:22,759 - WARNING - ⚠️ Héroe no encontrado: 6
+2026-04-04 21:49:23,473 - WARNING - ⚠️ Héroe no encontrado: 7
+2026-04-04 21:49:26,229 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(6) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 6, 'genero': 'Male', 'raza': 'Cyborg', 'altura': '-,0 cm', 'peso': '390 lb,176 kg', 'color_ojos': 'Red', 'color_cabello': '-', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 26, 227504)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:26,922 - WARNING - ⚠️ Héroe no encontrado: 9
+2026-04-04 21:49:29,749 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(3) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 3, 'genero': 'Male', 'raza': 'null', 'altura': '-,0 cm', 'peso': '- lb,0 kg', 'color_ojos': '-', 'color_cabello': '-', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 29, 747834)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:32,653 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(4) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 4, 'genero': 'Male', 'raza': 'Human', 'altura': '-,0 cm', 'peso': '- lb,0 kg', 'color_ojos': '-', 'color_cabello': 'Black', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 32, 652478)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:33,340 - WARNING - ⚠️ Héroe no encontrado: 12
+2026-04-04 21:49:36,195 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 36, 193395)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:36,878 - WARNING - ⚠️ Héroe no encontrado: 14
+2026-04-04 21:49:37,568 - WARNING - ⚠️ Héroe no encontrado: 15
+2026-04-04 21:49:38,255 - WARNING - ⚠️ Héroe no encontrado: 16
+2026-04-04 21:49:38,995 - WARNING - ⚠️ Héroe no encontrado: 17
+2026-04-04 21:49:38,021 - WARNING - ⚠️ Héroe no encontrado: 18
+2026-04-04 21:49:38,714 - WARNING - ⚠️ Héroe no encontrado: 19
+2026-04-04 21:49:39,411 - WARNING - ⚠️ Héroe no encontrado: 20
+2026-04-04 21:49:40,109 - WARNING - ⚠️ Héroe no encontrado: 21
+2026-04-04 21:49:40,892 - WARNING - ⚠️ Héroe no encontrado: 22
+2026-04-04 21:49:43,689 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(5) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 5, 'genero': 'Female', 'raza': 'Mutant / Clone', 'altura': "5'1,155 cm", 'peso': '110 lb,50 kg', 'color_ojos': 'Green', 'color_cabello': 'Black', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 49, 43, 687596)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:49:44,398 - WARNING - ⚠️ Héroe no encontrado: 24
+2026-04-04 21:49:45,111 - WARNING - ⚠️ Héroe no encontrado: 25
+2026-04-04 21:49:45,860 - WARNING - ⚠️ Héroe no encontrado: 26
+2026-04-04 21:49:46,687 - WARNING - ⚠️ Héroe no encontrado: 27
+2026-04-04 21:49:47,378 - WARNING - ⚠️ Héroe no encontrado: 28
+2026-04-04 21:49:48,065 - WARNING - ⚠️ Héroe no encontrado: 29
+2026-04-04 21:49:48,750 - WARNING - ⚠️ Héroe no encontrado: 30
+2026-04-04 21:49:49,441 - WARNING - ⚠️ Héroe no encontrado: 31
+2026-04-04 21:49:50,180 - WARNING - ⚠️ Héroe no encontrado: 32
+2026-04-04 21:49:50,877 - WARNING - ⚠️ Héroe no encontrado: 33
+2026-04-04 21:49:51,568 - WARNING - ⚠️ Héroe no encontrado: 34
+2026-04-04 21:49:52,281 - WARNING - ⚠️ Héroe no encontrado: 35
+2026-04-04 21:49:52,981 - WARNING - ⚠️ Héroe no encontrado: 36
+2026-04-04 21:49:53,685 - WARNING - ⚠️ Héroe no encontrado: 37
+2026-04-04 21:49:54,370 - WARNING - ⚠️ Héroe no encontrado: 38
+2026-04-04 21:49:55,121 - WARNING - ⚠️ Héroe no encontrado: 39
+2026-04-04 21:49:55,810 - WARNING - ⚠️ Héroe no encontrado: 40
+2026-04-04 21:49:56,487 - WARNING - ⚠️ Héroe no encontrado: 41
+2026-04-04 21:49:57,271 - WARNING - ⚠️ Héroe no encontrado: 42
+2026-04-04 21:49:57,958 - WARNING - ⚠️ Héroe no encontrado: 43
+2026-04-04 21:49:58,634 - WARNING - ⚠️ Héroe no encontrado: 44
+2026-04-04 21:49:59,339 - WARNING - ⚠️ Héroe no encontrado: 45
+2026-04-04 21:50:00,079 - WARNING - ⚠️ Héroe no encontrado: 46
+2026-04-04 21:50:00,768 - WARNING - ⚠️ Héroe no encontrado: 47
+2026-04-04 21:50:01,443 - WARNING - ⚠️ Héroe no encontrado: 48
+2026-04-04 21:50:02,134 - WARNING - ⚠️ Héroe no encontrado: 49
+2026-04-04 21:50:04,940 - INFO - ✅ Datos guardados para T-850
+2026-04-04 21:50:05,626 - WARNING - ⚠️ Héroe no encontrado: 51
+2026-04-04 21:50:06,328 - WARNING - ⚠️ Héroe no encontrado: 52
+2026-04-04 21:50:07,027 - WARNING - ⚠️ Héroe no encontrado: 53
+2026-04-04 21:50:06,061 - WARNING - ⚠️ Héroe no encontrado: 54
+2026-04-04 21:50:06,778 - WARNING - ⚠️ Héroe no encontrado: 55
+2026-04-04 21:50:07,491 - WARNING - ⚠️ Héroe no encontrado: 56
+2026-04-04 21:50:08,182 - WARNING - ⚠️ Héroe no encontrado: 57
+2026-04-04 21:50:08,938 - WARNING - ⚠️ Héroe no encontrado: 58
+2026-04-04 21:50:09,654 - WARNING - ⚠️ Héroe no encontrado: 59
+2026-04-04 21:50:10,322 - WARNING - ⚠️ Héroe no encontrado: 60
+2026-04-04 21:50:11,046 - WARNING - ⚠️ Héroe no encontrado: 61
+2026-04-04 21:50:11,760 - WARNING - ⚠️ Héroe no encontrado: 62
+2026-04-04 21:50:12,505 - WARNING - ⚠️ Héroe no encontrado: 63
+2026-04-04 21:50:13,217 - WARNING - ⚠️ Héroe no encontrado: 64
+2026-04-04 21:50:13,909 - WARNING - ⚠️ Héroe no encontrado: 65
+2026-04-04 21:50:14,621 - WARNING - ⚠️ Héroe no encontrado: 66
+2026-04-04 21:50:15,331 - WARNING - ⚠️ Héroe no encontrado: 67
+2026-04-04 21:50:16,014 - WARNING - ⚠️ Héroe no encontrado: 68
+2026-04-04 21:50:16,705 - WARNING - ⚠️ Héroe no encontrado: 69
+2026-04-04 21:50:17,402 - WARNING - ⚠️ Héroe no encontrado: 70
+2026-04-04 21:50:18,082 - WARNING - ⚠️ Héroe no encontrado: 71
+2026-04-04 21:50:18,767 - WARNING - ⚠️ Héroe no encontrado: 72
+2026-04-04 21:50:19,459 - WARNING - ⚠️ Héroe no encontrado: 73
+2026-04-04 21:50:20,133 - WARNING - ⚠️ Héroe no encontrado: 74
+2026-04-04 21:50:20,822 - WARNING - ⚠️ Héroe no encontrado: 75
+2026-04-04 21:50:21,520 - WARNING - ⚠️ Héroe no encontrado: 76
+2026-04-04 21:50:22,240 - WARNING - ⚠️ Héroe no encontrado: 77
+2026-04-04 21:50:22,925 - WARNING - ⚠️ Héroe no encontrado: 78
+2026-04-04 21:50:23,642 - WARNING - ⚠️ Héroe no encontrado: 79
+2026-04-04 21:50:26,478 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(6) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 6, 'genero': 'Male', 'raza': 'Cyborg', 'altura': '-,0 cm', 'peso': '390 lb,176 kg', 'color_ojos': 'Red', 'color_cabello': '-', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 50, 26, 476623)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:50:27,161 - WARNING - ⚠️ Héroe no encontrado: 81
+2026-04-04 21:50:27,844 - WARNING - ⚠️ Héroe no encontrado: 82
+2026-04-04 21:50:28,732 - WARNING - ⚠️ Héroe no encontrado: 83
+2026-04-04 21:50:29,420 - WARNING - ⚠️ Héroe no encontrado: 84
+2026-04-04 21:50:32,284 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(7) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 7, 'genero': 'Male', 'raza': 'Cyborg', 'altura': '-,0 cm', 'peso': '440 lb,198 kg', 'color_ojos': 'Red', 'color_cabello': '-', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 50, 32, 282856)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:50:32,980 - WARNING - ⚠️ Héroe no encontrado: 86
+2026-04-04 21:50:33,661 - WARNING - ⚠️ Héroe no encontrado: 87
+2026-04-04 21:50:34,351 - WARNING - ⚠️ Héroe no encontrado: 88
+2026-04-04 21:50:35,044 - WARNING - ⚠️ Héroe no encontrado: 89
+2026-04-04 21:50:35,721 - WARNING - ⚠️ Héroe no encontrado: 90
+2026-04-04 21:50:34,762 - WARNING - ⚠️ Héroe no encontrado: 91
+2026-04-04 21:50:35,454 - WARNING - ⚠️ Héroe no encontrado: 92
+2026-04-04 21:50:36,121 - WARNING - ⚠️ Héroe no encontrado: 93
+2026-04-04 21:50:36,838 - WARNING - ⚠️ Héroe no encontrado: 94
+2026-04-04 21:50:37,553 - WARNING - ⚠️ Héroe no encontrado: 95
+2026-04-04 21:50:38,250 - WARNING - ⚠️ Héroe no encontrado: 96
+2026-04-04 21:50:38,986 - WARNING - ⚠️ Héroe no encontrado: 97
+2026-04-04 21:50:39,698 - WARNING - ⚠️ Héroe no encontrado: 98
+2026-04-04 21:50:40,359 - WARNING - ⚠️ Héroe no encontrado: 99
+2026-04-04 21:50:43,124 - INFO - ✅ Datos guardados para T-1000
+2026-04-04 21:50:43,832 - WARNING - ⚠️ Héroe no encontrado: 101
+2026-04-04 21:50:44,494 - WARNING - ⚠️ Héroe no encontrado: 102
+2026-04-04 21:50:45,195 - WARNING - ⚠️ Héroe no encontrado: 103
+2026-04-04 21:50:45,874 - WARNING - ⚠️ Héroe no encontrado: 104
+2026-04-04 21:50:46,565 - WARNING - ⚠️ Héroe no encontrado: 105
+2026-04-04 21:50:47,250 - WARNING - ⚠️ Héroe no encontrado: 106
+2026-04-04 21:50:47,952 - WARNING - ⚠️ Héroe no encontrado: 107
+2026-04-04 21:50:48,593 - WARNING - ⚠️ Héroe no encontrado: 108
+2026-04-04 21:50:50,337 - WARNING - ⚠️ Héroe no encontrado: 109
+2026-04-04 21:50:51,039 - WARNING - ⚠️ Héroe no encontrado: 110
+2026-04-04 21:50:51,704 - WARNING - ⚠️ Héroe no encontrado: 111
+2026-04-04 21:50:52,370 - WARNING - ⚠️ Héroe no encontrado: 112
+2026-04-04 21:50:53,055 - WARNING - ⚠️ Héroe no encontrado: 113
+2026-04-04 21:50:53,755 - WARNING - ⚠️ Héroe no encontrado: 114
+2026-04-04 21:50:54,421 - WARNING - ⚠️ Héroe no encontrado: 115
+2026-04-04 21:50:55,156 - WARNING - ⚠️ Héroe no encontrado: 116
+2026-04-04 21:50:55,829 - WARNING - ⚠️ Héroe no encontrado: 117
+2026-04-04 21:50:56,489 - WARNING - ⚠️ Héroe no encontrado: 118
+2026-04-04 21:50:57,160 - WARNING - ⚠️ Héroe no encontrado: 119
+2026-04-04 21:50:57,842 - WARNING - ⚠️ Héroe no encontrado: 120
+2026-04-04 21:50:58,509 - WARNING - ⚠️ Héroe no encontrado: 121
+2026-04-04 21:50:59,180 - WARNING - ⚠️ Héroe no encontrado: 122
+2026-04-04 21:50:59,859 - WARNING - ⚠️ Héroe no encontrado: 123
+2026-04-04 21:51:00,627 - WARNING - ⚠️ Héroe no encontrado: 124
+2026-04-04 21:51:01,323 - WARNING - ⚠️ Héroe no encontrado: 125
+2026-04-04 21:51:01,995 - WARNING - ⚠️ Héroe no encontrado: 126
+2026-04-04 21:51:02,774 - WARNING - ⚠️ Héroe no encontrado: 127
+2026-04-04 21:51:03,480 - WARNING - ⚠️ Héroe no encontrado: 128
+2026-04-04 21:51:04,162 - WARNING - ⚠️ Héroe no encontrado: 129
+2026-04-04 21:51:03,214 - WARNING - ⚠️ Héroe no encontrado: 130
+2026-04-04 21:51:03,923 - WARNING - ⚠️ Héroe no encontrado: 131
+2026-04-04 21:51:04,643 - WARNING - ⚠️ Héroe no encontrado: 132
+2026-04-04 21:51:05,310 - WARNING - ⚠️ Héroe no encontrado: 133
+2026-04-04 21:51:05,993 - WARNING - ⚠️ Héroe no encontrado: 134
+2026-04-04 21:51:06,713 - WARNING - ⚠️ Héroe no encontrado: 135
+2026-04-04 21:51:07,397 - WARNING - ⚠️ Héroe no encontrado: 136
+2026-04-04 21:51:08,083 - WARNING - ⚠️ Héroe no encontrado: 137
+2026-04-04 21:51:08,750 - WARNING - ⚠️ Héroe no encontrado: 138
+2026-04-04 21:51:09,428 - WARNING - ⚠️ Héroe no encontrado: 139
+2026-04-04 21:51:10,131 - WARNING - ⚠️ Héroe no encontrado: 140
+2026-04-04 21:51:10,817 - WARNING - ⚠️ Héroe no encontrado: 141
+2026-04-04 21:51:11,498 - WARNING - ⚠️ Héroe no encontrado: 142
+2026-04-04 21:51:12,193 - WARNING - ⚠️ Héroe no encontrado: 143
+2026-04-04 21:51:12,962 - WARNING - ⚠️ Héroe no encontrado: 144
+2026-04-04 21:51:13,638 - WARNING - ⚠️ Héroe no encontrado: 145
+2026-04-04 21:51:14,350 - WARNING - ⚠️ Héroe no encontrado: 146
+2026-04-04 21:51:15,022 - WARNING - ⚠️ Héroe no encontrado: 147
+2026-04-04 21:51:15,700 - WARNING - ⚠️ Héroe no encontrado: 148
+2026-04-04 21:51:16,362 - WARNING - ⚠️ Héroe no encontrado: 149
+2026-04-04 21:51:17,042 - WARNING - ⚠️ Héroe no encontrado: 150
+2026-04-04 21:51:17,737 - WARNING - ⚠️ Héroe no encontrado: 151
+2026-04-04 21:51:18,433 - WARNING - ⚠️ Héroe no encontrado: 152
+2026-04-04 21:51:19,122 - WARNING - ⚠️ Héroe no encontrado: 153
+2026-04-04 21:51:19,780 - WARNING - ⚠️ Héroe no encontrado: 154
+2026-04-04 21:51:20,501 - WARNING - ⚠️ Héroe no encontrado: 155
+2026-04-04 21:51:21,192 - WARNING - ⚠️ Héroe no encontrado: 156
+2026-04-04 21:51:21,877 - WARNING - ⚠️ Héroe no encontrado: 157
+2026-04-04 21:51:22,551 - WARNING - ⚠️ Héroe no encontrado: 158
+2026-04-04 21:51:23,223 - WARNING - ⚠️ Héroe no encontrado: 159
+2026-04-04 21:51:23,921 - WARNING - ⚠️ Héroe no encontrado: 160
+2026-04-04 21:51:24,583 - WARNING - ⚠️ Héroe no encontrado: 161
+2026-04-04 21:51:25,322 - WARNING - ⚠️ Héroe no encontrado: 162
+2026-04-04 21:51:26,034 - WARNING - ⚠️ Héroe no encontrado: 163
+2026-04-04 21:51:26,716 - WARNING - ⚠️ Héroe no encontrado: 164
+2026-04-04 21:51:27,417 - WARNING - ⚠️ Héroe no encontrado: 165
+2026-04-04 21:51:28,097 - WARNING - ⚠️ Héroe no encontrado: 166
+2026-04-04 21:51:28,796 - WARNING - ⚠️ Héroe no encontrado: 167
+2026-04-04 21:51:29,468 - WARNING - ⚠️ Héroe no encontrado: 168
+2026-04-04 21:51:30,163 - WARNING - ⚠️ Héroe no encontrado: 169
+2026-04-04 21:51:30,835 - WARNING - ⚠️ Héroe no encontrado: 170
+2026-04-04 21:51:31,555 - WARNING - ⚠️ Héroe no encontrado: 171
+2026-04-04 21:51:32,221 - WARNING - ⚠️ Héroe no encontrado: 172
+2026-04-04 21:51:31,252 - WARNING - ⚠️ Héroe no encontrado: 173
+2026-04-04 21:51:31,915 - WARNING - ⚠️ Héroe no encontrado: 174
+2026-04-04 21:51:32,624 - WARNING - ⚠️ Héroe no encontrado: 175
+2026-04-04 21:51:33,300 - WARNING - ⚠️ Héroe no encontrado: 176
+2026-04-04 21:51:33,956 - WARNING - ⚠️ Héroe no encontrado: 177
+2026-04-04 21:51:34,645 - WARNING - ⚠️ Héroe no encontrado: 178
+2026-04-04 21:51:35,321 - WARNING - ⚠️ Héroe no encontrado: 179
+2026-04-04 21:51:36,011 - WARNING - ⚠️ Héroe no encontrado: 180
+2026-04-04 21:51:36,679 - WARNING - ⚠️ Héroe no encontrado: 181
+2026-04-04 21:51:37,352 - WARNING - ⚠️ Héroe no encontrado: 182
+2026-04-04 21:51:38,031 - WARNING - ⚠️ Héroe no encontrado: 183
+2026-04-04 21:51:38,734 - WARNING - ⚠️ Héroe no encontrado: 184
+2026-04-04 21:51:39,486 - WARNING - ⚠️ Héroe no encontrado: 185
+2026-04-04 21:51:40,172 - WARNING - ⚠️ Héroe no encontrado: 186
+2026-04-04 21:51:40,856 - WARNING - ⚠️ Héroe no encontrado: 187
+2026-04-04 21:51:41,527 - WARNING - ⚠️ Héroe no encontrado: 188
+2026-04-04 21:51:42,211 - WARNING - ⚠️ Héroe no encontrado: 189
+2026-04-04 21:51:42,895 - WARNING - ⚠️ Héroe no encontrado: 190
+2026-04-04 21:51:43,577 - WARNING - ⚠️ Héroe no encontrado: 191
+2026-04-04 21:51:44,271 - WARNING - ⚠️ Héroe no encontrado: 192
+2026-04-04 21:51:44,948 - WARNING - ⚠️ Héroe no encontrado: 193
+2026-04-04 21:51:45,628 - WARNING - ⚠️ Héroe no encontrado: 194
+2026-04-04 21:51:46,373 - WARNING - ⚠️ Héroe no encontrado: 195
+2026-04-04 21:51:47,097 - WARNING - ⚠️ Héroe no encontrado: 196
+2026-04-04 21:51:47,849 - WARNING - ⚠️ Héroe no encontrado: 197
+2026-04-04 21:51:48,568 - WARNING - ⚠️ Héroe no encontrado: 198
+2026-04-04 21:51:49,257 - WARNING - ⚠️ Héroe no encontrado: 199
+2026-04-04 21:51:49,995 - WARNING - ⚠️ Héroe no encontrado: 200
+2026-04-04 21:51:50,704 - WARNING - ⚠️ Héroe no encontrado: 201
+2026-04-04 21:51:51,388 - WARNING - ⚠️ Héroe no encontrado: 202
+2026-04-04 21:51:52,077 - WARNING - ⚠️ Héroe no encontrado: 203
+2026-04-04 21:51:52,800 - WARNING - ⚠️ Héroe no encontrado: 204
+2026-04-04 21:51:53,504 - WARNING - ⚠️ Héroe no encontrado: 205
+2026-04-04 21:51:54,191 - WARNING - ⚠️ Héroe no encontrado: 206
+2026-04-04 21:51:54,919 - WARNING - ⚠️ Héroe no encontrado: 207
+2026-04-04 21:51:55,622 - WARNING - ⚠️ Héroe no encontrado: 208
+2026-04-04 21:51:56,283 - WARNING - ⚠️ Héroe no encontrado: 209
+2026-04-04 21:51:56,965 - WARNING - ⚠️ Héroe no encontrado: 210
+2026-04-04 21:51:57,656 - WARNING - ⚠️ Héroe no encontrado: 211
+2026-04-04 21:51:58,414 - WARNING - ⚠️ Héroe no encontrado: 212
+2026-04-04 21:51:59,077 - WARNING - ⚠️ Héroe no encontrado: 213
+2026-04-04 21:51:59,756 - WARNING - ⚠️ Héroe no encontrado: 214
+2026-04-04 21:52:00,430 - WARNING - ⚠️ Héroe no encontrado: 215
+2026-04-04 21:51:59,488 - WARNING - ⚠️ Héroe no encontrado: 216
+2026-04-04 21:52:00,176 - WARNING - ⚠️ Héroe no encontrado: 217
+2026-04-04 21:52:10,666 - ERROR - ❌ Error buscando héroe 218: HTTPSConnectionPool(host='www.superheroapi.com', port=443): Read timed out. (read timeout=10)
+2026-04-04 21:52:20,792 - ERROR - ❌ Error buscando héroe 219: HTTPSConnectionPool(host='superheroapi.com', port=443): Max retries exceeded with url: /api/c769a4f353005f52b67f97d367a4e2f9/search/219 (Caused by NameResolutionError("HTTPSConnection(host='superheroapi.com', port=443): Failed to resolve 'superheroapi.com' ([Errno -3] Temporary failure in name resolution)"))
+2026-04-04 21:52:29,165 - ERROR - ❌ Error buscando héroe 220: HTTPSConnectionPool(host='superheroapi.com', port=443): Max retries exceeded with url: /api/c769a4f353005f52b67f97d367a4e2f9/search/220 (Caused by NameResolutionError("HTTPSConnection(host='superheroapi.com', port=443): Failed to resolve 'superheroapi.com' ([Errno -3] Temporary failure in name resolution)"))
+2026-04-04 21:52:29,976 - WARNING - ⚠️ Héroe no encontrado: 221
+2026-04-04 21:52:30,680 - WARNING - ⚠️ Héroe no encontrado: 222
+2026-04-04 21:52:31,399 - WARNING - ⚠️ Héroe no encontrado: 223
+2026-04-04 21:52:32,104 - WARNING - ⚠️ Héroe no encontrado: 224
+2026-04-04 21:52:32,794 - WARNING - ⚠️ Héroe no encontrado: 225
+2026-04-04 21:52:33,478 - WARNING - ⚠️ Héroe no encontrado: 226
+2026-04-04 21:52:34,183 - WARNING - ⚠️ Héroe no encontrado: 227
+2026-04-04 21:52:34,876 - WARNING - ⚠️ Héroe no encontrado: 228
+2026-04-04 21:52:35,563 - WARNING - ⚠️ Héroe no encontrado: 229
+2026-04-04 21:52:36,280 - WARNING - ⚠️ Héroe no encontrado: 230
+2026-04-04 21:52:36,996 - WARNING - ⚠️ Héroe no encontrado: 231
+2026-04-04 21:52:37,669 - WARNING - ⚠️ Héroe no encontrado: 232
+2026-04-04 21:52:38,338 - WARNING - ⚠️ Héroe no encontrado: 233
+2026-04-04 21:52:39,664 - WARNING - ⚠️ Héroe no encontrado: 234
+2026-04-04 21:52:40,398 - WARNING - ⚠️ Héroe no encontrado: 235
+2026-04-04 21:52:41,074 - WARNING - ⚠️ Héroe no encontrado: 236
+2026-04-04 21:52:41,789 - WARNING - ⚠️ Héroe no encontrado: 237
+2026-04-04 21:52:42,492 - WARNING - ⚠️ Héroe no encontrado: 238
+2026-04-04 21:52:43,206 - WARNING - ⚠️ Héroe no encontrado: 239
+2026-04-04 21:52:43,924 - WARNING - ⚠️ Héroe no encontrado: 240
+2026-04-04 21:52:44,742 - WARNING - ⚠️ Héroe no encontrado: 241
+2026-04-04 21:52:45,568 - WARNING - ⚠️ Héroe no encontrado: 242
+2026-04-04 21:52:46,263 - WARNING - ⚠️ Héroe no encontrado: 243
+2026-04-04 21:52:46,939 - WARNING - ⚠️ Héroe no encontrado: 244
+2026-04-04 21:52:46,954 - INFO - 📊 Métricas ETL guardadas
+2026-04-04 21:53:12,477 - INFO - 🚀 Iniciando ETL para 244 superhéroes
+2026-04-04 21:53:15,323 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(1) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 1, 'genero': 'Female', 'raza': 'null', 'altura': "5'8,173 cm", 'peso': '135 lb,61 kg', 'color_ojos': 'Blue', 'color_cabello': 'Blond', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 53, 15, 321581)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:53:18,253 - ERROR - ❌ Error de integridad: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_apariencia_superhero_id"
+DETAIL:  Key (superhero_id)=(2) already exists.
+
+[SQL: INSERT INTO apariencia (superhero_id, genero, raza, altura, peso, color_ojos, color_cabello, fecha_creacion) VALUES (%(superhero_id)s, %(genero)s, %(raza)s, %(altura)s, %(peso)s, %(color_ojos)s, %(color_cabello)s, %(fecha_creacion)s) RETURNING apariencia.id]
+[parameters: {'superhero_id': 2, 'genero': 'Male', 'raza': 'Android', 'altura': "7'0,213 cm", 'peso': '- lb,0 kg', 'color_ojos': 'White', 'color_cabello': 'No Hair', 'fecha_creacion': datetime.datetime(2026, 4, 5, 2, 53, 18, 252304)}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-04-04 21:59:30,530 - INFO - 🚀 Iniciando ETL para 244 superhéroes (por ID)
+2026-04-04 21:59:34,259 - INFO - ✅ Datos guardados para A-Bomb
+2026-04-04 21:59:35,343 - INFO - ✅ Datos guardados para Abe Sapien
+2026-04-04 21:59:38,457 - INFO - ✅ Datos guardados para Abin Sur
+2026-04-04 21:59:41,324 - INFO - ✅ Datos guardados para Abomination
+2026-04-04 21:59:44,272 - INFO - ✅ Datos guardados para Abraxas
+2026-04-04 21:59:47,349 - INFO - ✅ Datos guardados para Absorbing Man
+2026-04-04 21:59:50,366 - INFO - ✅ Datos guardados para Adam Monroe
+2026-04-04 21:59:53,294 - INFO - ✅ Datos guardados para Adam Strange
+2026-04-04 21:59:56,093 - INFO - ✅ Datos guardados para Agent 13
+2026-04-04 21:59:59,893 - INFO - ✅ Datos guardados para Agent Bob
+2026-04-04 22:00:02,708 - INFO - ✅ Datos guardados para Agent Zero
+2026-04-04 22:00:04,149 - INFO - ✅ Datos guardados para Air-Walker
+2026-04-04 22:00:07,354 - INFO - ✅ Datos guardados para Ajax
+2026-04-04 22:00:10,056 - INFO - ✅ Datos guardados para Alan Scott
+2026-04-04 22:00:12,869 - INFO - ✅ Datos guardados para Alex Mercer
+2026-04-04 22:00:15,599 - INFO - ✅ Datos guardados para Alex Woolsly
+2026-04-04 22:00:18,429 - INFO - ✅ Datos guardados para Alfred Pennyworth
+2026-04-04 22:00:21,180 - INFO - ✅ Datos guardados para Alien
+2026-04-04 22:00:23,947 - INFO - ✅ Datos guardados para Allan Quatermain
+2026-04-04 22:00:26,768 - INFO - ✅ Datos guardados para Amazo
+2026-04-04 22:00:29,624 - INFO - ✅ Datos guardados para Ammo
+2026-04-04 22:00:31,877 - INFO - ✅ Datos guardados para Ando Masahashi
+2026-04-04 22:00:34,732 - INFO - ✅ Datos guardados para Angel
+2026-04-04 22:00:37,588 - INFO - ✅ Datos guardados para Angel
+2026-04-04 22:00:40,377 - INFO - ✅ Datos guardados para Angel Dust
+2026-04-04 22:00:43,149 - INFO - ✅ Datos guardados para Angel Salvadore
+2026-04-04 22:00:45,973 - INFO - ✅ Datos guardados para Angela
+2026-04-04 22:00:48,796 - INFO - ✅ Datos guardados para Animal Man
+2026-04-04 22:00:51,654 - INFO - ✅ Datos guardados para Annihilus
+2026-04-04 22:00:54,470 - INFO - ✅ Datos guardados para Ant-Man
+2026-04-04 22:00:57,279 - INFO - ✅ Datos guardados para Ant-Man II
+2026-04-04 22:00:58,464 - INFO - ✅ Datos guardados para Anti-Monitor
+2026-04-04 22:01:01,237 - INFO - ✅ Datos guardados para Anti-Spawn
+2026-04-04 22:01:05,087 - INFO - ✅ Datos guardados para Anti-Venom
+2026-04-04 22:01:07,906 - INFO - ✅ Datos guardados para Apocalypse
+2026-04-04 22:01:10,822 - INFO - ✅ Datos guardados para Aquababy
+2026-04-04 22:01:13,666 - INFO - ✅ Datos guardados para Aqualad
+2026-04-04 22:01:16,508 - INFO - ✅ Datos guardados para Aquaman
+2026-04-04 22:01:19,362 - INFO - ✅ Datos guardados para Arachne
+2026-04-04 22:01:22,091 - INFO - ✅ Datos guardados para Archangel
+2026-04-04 22:01:24,870 - INFO - ✅ Datos guardados para Arclight
+2026-04-04 22:01:27,549 - INFO - ✅ Datos guardados para Ardina
+2026-04-04 22:01:28,673 - INFO - ✅ Datos guardados para Ares
+2026-04-04 22:01:31,517 - INFO - ✅ Datos guardados para Ariel
+2026-04-04 22:01:34,247 - INFO - ✅ Datos guardados para Armor
+2026-04-04 22:01:37,086 - INFO - ✅ Datos guardados para Arsenal
+2026-04-04 22:01:39,925 - INFO - ✅ Datos guardados para Astro Boy
+2026-04-04 22:01:42,674 - INFO - ✅ Datos guardados para Atlas
+2026-04-04 22:01:45,451 - INFO - ✅ Datos guardados para Atlas
+2026-04-04 22:01:48,354 - INFO - ✅ Datos guardados para Atom
+2026-04-04 22:01:51,099 - INFO - ✅ Datos guardados para Atom
+2026-04-04 22:01:53,831 - INFO - ✅ Datos guardados para Atom Girl
+2026-04-04 22:01:56,532 - INFO - ✅ Datos guardados para Atom II
+2026-04-04 22:01:57,652 - INFO - ✅ Datos guardados para Atom III
+2026-04-04 22:02:00,437 - INFO - ✅ Datos guardados para Atom IV
+2026-04-04 22:02:03,206 - INFO - ✅ Datos guardados para Aurora
+2026-04-04 22:02:05,903 - INFO - ✅ Datos guardados para Azazel
+2026-04-04 22:02:08,665 - INFO - ✅ Datos guardados para Azrael
+2026-04-04 22:02:11,426 - INFO - ✅ Datos guardados para Aztar
+2026-04-04 22:02:14,133 - INFO - ✅ Datos guardados para Bane
+2026-04-04 22:02:16,886 - INFO - ✅ Datos guardados para Banshee
+2026-04-04 22:02:20,179 - INFO - ✅ Datos guardados para Bantam
+2026-04-04 22:02:22,940 - INFO - ✅ Datos guardados para Batgirl
+2026-04-04 22:02:24,042 - INFO - ✅ Datos guardados para Batgirl
+2026-04-04 22:02:26,841 - INFO - ✅ Datos guardados para Batgirl III
+2026-04-04 22:02:29,630 - INFO - ✅ Datos guardados para Batgirl IV
+2026-04-04 22:02:32,352 - INFO - ✅ Datos guardados para Batgirl V
+2026-04-04 22:02:35,051 - INFO - ✅ Datos guardados para Batgirl VI
+2026-04-04 22:02:37,779 - INFO - ✅ Datos guardados para Batman
+2026-04-04 22:02:40,573 - INFO - ✅ Datos guardados para Batman
+2026-04-04 22:02:43,452 - INFO - ✅ Datos guardados para Batman II
+2026-04-04 22:02:46,318 - INFO - ✅ Datos guardados para Battlestar
+2026-04-04 22:02:49,046 - INFO - ✅ Datos guardados para Batwoman V
+2026-04-04 22:02:51,744 - INFO - ✅ Datos guardados para Beak
+2026-04-04 22:02:52,937 - INFO - ✅ Datos guardados para Beast
+2026-04-04 22:02:55,681 - INFO - ✅ Datos guardados para Beast Boy
+2026-04-04 22:02:58,594 - INFO - ✅ Datos guardados para Beetle
+2026-04-04 22:03:01,356 - INFO - ✅ Datos guardados para Ben 10
+2026-04-04 22:03:04,184 - INFO - ✅ Datos guardados para Beta Ray Bill
+2026-04-04 22:03:06,980 - INFO - ✅ Datos guardados para Beyonder
+2026-04-04 22:03:09,739 - INFO - ✅ Datos guardados para Big Barda
+2026-04-04 22:03:12,480 - INFO - ✅ Datos guardados para Big Daddy
+2026-04-04 22:03:15,291 - INFO - ✅ Datos guardados para Big Man
+2026-04-04 22:03:18,068 - INFO - ✅ Datos guardados para Bill Harken
+2026-04-04 22:03:20,887 - INFO - ✅ Datos guardados para Billy Kincaid
+2026-04-04 22:03:22,061 - INFO - ✅ Datos guardados para Binary
+2026-04-04 22:03:24,857 - INFO - ✅ Datos guardados para Bionic Woman
+2026-04-04 22:03:27,702 - INFO - ✅ Datos guardados para Bird-Brain
+2026-04-04 22:03:30,492 - INFO - ✅ Datos guardados para Bird-Man
+2026-04-04 22:03:33,254 - INFO - ✅ Datos guardados para Bird-Man II
+2026-04-04 22:03:36,004 - INFO - ✅ Datos guardados para Birdman
+2026-04-04 22:03:38,798 - INFO - ✅ Datos guardados para Bishop
+2026-04-04 22:03:41,539 - INFO - ✅ Datos guardados para Bizarro
+2026-04-04 22:03:44,366 - INFO - ✅ Datos guardados para Black Abbott
+2026-04-04 22:03:47,171 - INFO - ✅ Datos guardados para Black Adam
+2026-04-04 22:03:49,895 - INFO - ✅ Datos guardados para Black Bolt
+2026-04-04 22:03:51,057 - INFO - ✅ Datos guardados para Black Canary
+2026-04-04 22:03:54,514 - INFO - ✅ Datos guardados para Black Canary
+2026-04-04 22:03:57,283 - INFO - ✅ Datos guardados para Black Cat
+2026-04-04 22:04:00,093 - INFO - ✅ Datos guardados para Black Flash
+2026-04-04 22:04:02,805 - INFO - ✅ Datos guardados para Black Goliath
+2026-04-04 22:04:05,553 - INFO - ✅ Datos guardados para Black Knight III
+2026-04-04 22:04:08,299 - INFO - ✅ Datos guardados para Black Lightning
+2026-04-04 22:04:11,120 - INFO - ✅ Datos guardados para Black Mamba
+2026-04-04 22:04:13,874 - INFO - ✅ Datos guardados para Black Manta
+2026-04-04 22:04:16,644 - INFO - ✅ Datos guardados para Black Panther
+2026-04-04 22:04:17,943 - INFO - ✅ Datos guardados para Black Widow
+2026-04-04 22:04:20,712 - INFO - ✅ Datos guardados para Black Widow II
+2026-04-04 22:04:23,537 - INFO - ✅ Datos guardados para Blackout
+2026-04-04 22:04:26,328 - INFO - ✅ Datos guardados para Blackwing
+2026-04-04 22:04:30,249 - INFO - ✅ Datos guardados para Blackwulf
+2026-04-04 22:04:33,095 - INFO - ✅ Datos guardados para Blade
+2026-04-04 22:04:35,948 - INFO - ✅ Datos guardados para Blaquesmith
+2026-04-04 22:04:38,715 - INFO - ✅ Datos guardados para Bling!
+2026-04-04 22:04:41,561 - INFO - ✅ Datos guardados para Blink
+2026-04-04 22:04:44,320 - INFO - ✅ Datos guardados para Blizzard
+2026-04-04 22:04:45,400 - INFO - ✅ Datos guardados para Blizzard
+2026-04-04 22:04:48,219 - INFO - ✅ Datos guardados para Blizzard II
+2026-04-04 22:04:51,014 - INFO - ✅ Datos guardados para Blob
+2026-04-04 22:04:53,761 - INFO - ✅ Datos guardados para Bloodaxe
+2026-04-04 22:04:56,539 - INFO - ✅ Datos guardados para Bloodhawk
+2026-04-04 22:04:59,316 - INFO - ✅ Datos guardados para Bloodwraith
+2026-04-04 22:05:02,031 - INFO - ✅ Datos guardados para Blue Beetle
+2026-04-04 22:05:04,972 - INFO - ✅ Datos guardados para Blue Beetle
+2026-04-04 22:05:07,697 - INFO - ✅ Datos guardados para Blue Beetle II
+2026-04-04 22:05:10,552 - INFO - ✅ Datos guardados para Blue Beetle III
+2026-04-04 22:05:13,433 - INFO - ✅ Datos guardados para Boba Fett
+2026-04-04 22:05:14,587 - INFO - ✅ Datos guardados para Bolt
+2026-04-04 22:05:17,302 - INFO - ✅ Datos guardados para Bomb Queen
+2026-04-04 22:05:20,201 - INFO - ✅ Datos guardados para Boom-Boom
+2026-04-04 22:05:22,958 - INFO - ✅ Datos guardados para Boomer
+2026-04-04 22:05:25,706 - INFO - ✅ Datos guardados para Booster Gold
+2026-04-04 22:05:28,512 - INFO - ✅ Datos guardados para Box
+2026-04-04 22:05:31,293 - INFO - ✅ Datos guardados para Box III
+2026-04-04 22:05:34,030 - INFO - ✅ Datos guardados para Box IV
+2026-04-04 22:05:36,848 - INFO - ✅ Datos guardados para Brainiac
+2026-04-04 22:05:39,685 - ERROR - ❌ Error guardando datos: (psycopg2.errors.StringDataRightTruncation) value too long for type character varying(200)
+
+[SQL: INSERT INTO superheroes (superhero_api_id, nombre, nombre_real, editorial, alineacion, lugar_nacimiento, primera_aparicion, fecha_creacion, activo) VALUES (%(superhero_api_id)s, %(nombre)s, %(nombre_real)s, %(editorial)s, %(alineacion)s, %(lugar_nacimiento)s, %(primera_aparicion)s, %(fecha_creacion)s, %(activo)s) RETURNING superheroes.id]
+[parameters: {'superhero_api_id': 137, 'nombre': 'Brainiac 5', 'nombre_real': 'Querl Dox', 'editorial': 'DC Comics', 'alineacion': 'good', 'lugar_nacimiento': '-', 'primera_aparicion': "Brainiac 5's primary invention is his personal force-shield generator. Brainiac 5 re-discovered the technical process behind original Brainiac's force-shield belt, which is capable of generating a virtually impervious field of protection. The belt must be", 'fecha_creacion': datetime.datetime(2026, 4, 5, 3, 5, 39, 681431), 'activo': True}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2026-04-04 22:05:42,467 - INFO - ✅ Datos guardados para Brother Voodoo
+2026-04-04 22:05:43,600 - INFO - ✅ Datos guardados para Brundlefly
+2026-04-04 22:05:46,473 - INFO - ✅ Datos guardados para Buffy
+2026-04-04 22:05:49,236 - INFO - ✅ Datos guardados para Bullseye
+2026-04-04 22:05:51,992 - INFO - ✅ Datos guardados para Bumblebee
+2026-04-04 22:05:54,792 - INFO - ✅ Datos guardados para Bumbleboy
+2026-04-04 22:05:57,592 - INFO - ✅ Datos guardados para Bushido
+2026-04-04 22:06:00,434 - INFO - ✅ Datos guardados para Cable
+2026-04-04 22:06:11,676 - ERROR - ❌ Error en biography para ID 146: HTTPSConnectionPool(host='www.superheroapi.com', port=443): Read timed out. (read timeout=10)
+2026-04-04 22:06:21,002 - ERROR - ❌ Error en powerstats para ID 146: HTTPSConnectionPool(host='superheroapi.com', port=443): Max retries exceeded with url: /api/c769a4f353005f52b67f97d367a4e2f9/146/powerstats (Caused by NameResolutionError("HTTPSConnection(host='superheroapi.com', port=443): Failed to resolve 'superheroapi.com' ([Errno -3] Temporary failure in name resolution)"))
+2026-04-04 22:06:31,044 - ERROR - ❌ Error en appearance para ID 146: HTTPSConnectionPool(host='superheroapi.com', port=443): Max retries exceeded with url: /api/c769a4f353005f52b67f97d367a4e2f9/146/appearance (Caused by NameResolutionError("HTTPSConnection(host='superheroapi.com', port=443): Failed to resolve 'superheroapi.com' ([Errno -3] Temporary failure in name resolution)"))
+2026-04-04 22:06:41,167 - ERROR - ❌ Error obteniendo héroe 147: HTTPSConnectionPool(host='superheroapi.com', port=443): Max retries exceeded with url: /api/c769a4f353005f52b67f97d367a4e2f9/147 (Caused by NameResolutionError("HTTPSConnection(host='superheroapi.com', port=443): Failed to resolve 'superheroapi.com' ([Errno -3] Temporary failure in name resolution)"))
+2026-04-04 22:06:41,540 - INFO - ✅ Datos guardados para Cannonball
+2026-04-04 22:06:44,265 - INFO - ✅ Datos guardados para Captain America
+2026-04-04 22:06:47,002 - INFO - ✅ Datos guardados para Captain Atom
+2026-04-04 22:06:49,789 - INFO - ✅ Datos guardados para Captain Britain
+2026-04-04 22:06:52,643 - INFO - ✅ Datos guardados para Captain Cold
+2026-04-04 22:06:55,590 - INFO - ✅ Datos guardados para Captain Epic
+2026-04-04 22:06:58,439 - INFO - ✅ Datos guardados para Captain Hindsight
+2026-04-04 22:07:01,260 - INFO - ✅ Datos guardados para Captain Mar-vell
+2026-04-04 22:07:05,272 - INFO - ✅ Datos guardados para Captain Marvel
+2026-04-04 22:07:08,132 - INFO - ✅ Datos guardados para Captain Marvel
+2026-04-04 22:07:09,432 - INFO - ✅ Datos guardados para Captain Marvel II
+2026-04-04 22:07:12,270 - INFO - ✅ Datos guardados para Captain Midnight
+2026-04-04 22:07:15,062 - INFO - ✅ Datos guardados para Captain Planet
+2026-04-04 22:07:17,938 - INFO - ✅ Datos guardados para Captain Universe
+2026-04-04 22:07:20,779 - INFO - ✅ Datos guardados para Carnage
+2026-04-04 22:07:23,635 - INFO - ✅ Datos guardados para Cat
+2026-04-04 22:07:26,784 - INFO - ✅ Datos guardados para Cat II
+2026-04-04 22:07:29,601 - INFO - ✅ Datos guardados para Catwoman
+2026-04-04 22:07:32,435 - INFO - ✅ Datos guardados para Cecilia Reyes
+2026-04-04 22:07:35,295 - INFO - ✅ Datos guardados para Century
+2026-04-04 22:07:36,333 - INFO - ✅ Datos guardados para Cerebra
+2026-04-04 22:07:39,175 - INFO - ✅ Datos guardados para Chamber
+2026-04-04 22:07:41,952 - INFO - ✅ Datos guardados para Chameleon
+2026-04-04 22:07:44,781 - INFO - ✅ Datos guardados para Changeling
+2026-04-04 22:07:47,594 - INFO - ✅ Datos guardados para Cheetah
+2026-04-04 22:07:50,457 - INFO - ✅ Datos guardados para Cheetah II
+2026-04-04 22:07:53,615 - INFO - ✅ Datos guardados para Cheetah III
+2026-04-04 22:07:56,557 - INFO - ✅ Datos guardados para Chromos
+2026-04-04 22:07:59,455 - INFO - ✅ Datos guardados para Chuck Norris
+2026-04-04 22:08:02,327 - INFO - ✅ Datos guardados para Citizen Steel
+2026-04-04 22:08:05,187 - INFO - ✅ Datos guardados para Claire Bennet
+2026-04-04 22:08:06,472 - INFO - ✅ Datos guardados para Clea
+2026-04-04 22:08:09,302 - INFO - ✅ Datos guardados para Cloak
+2026-04-04 22:08:12,097 - INFO - ✅ Datos guardados para Clock King
+2026-04-04 22:08:14,953 - INFO - ✅ Datos guardados para Cogliostro
+2026-04-04 22:08:17,737 - INFO - ✅ Datos guardados para Colin Wagner
+2026-04-04 22:08:20,639 - INFO - ✅ Datos guardados para Colossal Boy
+2026-04-04 22:08:23,458 - INFO - ✅ Datos guardados para Colossus
+2026-04-04 22:08:26,255 - INFO - ✅ Datos guardados para Copycat
+2026-04-04 22:08:29,098 - INFO - ✅ Datos guardados para Corsair
+2026-04-04 22:08:31,888 - INFO - ✅ Datos guardados para Cottonmouth
+2026-04-04 22:08:33,114 - INFO - ✅ Datos guardados para Crimson Crusader
+2026-04-04 22:08:35,919 - INFO - ✅ Datos guardados para Crimson Dynamo
+2026-04-04 22:08:38,675 - INFO - ✅ Datos guardados para Crystal
+2026-04-04 22:08:41,485 - INFO - ✅ Datos guardados para Curse
+2026-04-04 22:08:44,373 - INFO - ✅ Datos guardados para Cy-Gor
+2026-04-04 22:08:47,245 - INFO - ✅ Datos guardados para Cyborg
+2026-04-04 22:08:50,011 - INFO - ✅ Datos guardados para Cyborg Superman
+2026-04-04 22:08:52,784 - INFO - ✅ Datos guardados para Cyclops
+2026-04-04 22:08:55,664 - INFO - ✅ Datos guardados para Cypher
+2026-04-04 22:08:58,476 - INFO - ✅ Datos guardados para Dagger
+2026-04-04 22:09:01,350 - INFO - ✅ Datos guardados para Danny Cooper
+2026-04-04 22:09:02,583 - INFO - ✅ Datos guardados para Daphne Powell
+2026-04-04 22:09:05,350 - INFO - ✅ Datos guardados para Daredevil
+2026-04-04 22:09:08,165 - INFO - ✅ Datos guardados para Darkhawk
+2026-04-04 22:09:11,007 - INFO - ✅ Datos guardados para Darkman
+2026-04-04 22:09:13,876 - INFO - ✅ Datos guardados para Darkseid
+2026-04-04 22:09:16,775 - INFO - ✅ Datos guardados para Darkside
+2026-04-04 22:09:19,657 - INFO - ✅ Datos guardados para Darkstar
+2026-04-04 22:09:22,476 - INFO - ✅ Datos guardados para Darth Maul
+2026-04-04 22:09:25,288 - INFO - ✅ Datos guardados para Darth Vader
+2026-04-04 22:09:28,047 - INFO - ✅ Datos guardados para Dash
+2026-04-04 22:09:29,220 - INFO - ✅ Datos guardados para Data
+2026-04-04 22:09:32,008 - INFO - ✅ Datos guardados para Dazzler
+2026-04-04 22:09:34,858 - INFO - ✅ Datos guardados para Deadman
+2026-04-04 22:09:37,663 - INFO - ✅ Datos guardados para Deadpool
+2026-04-04 22:09:41,417 - INFO - ✅ Datos guardados para Deadshot
+2026-04-04 22:09:44,233 - INFO - ✅ Datos guardados para Deathlok
+2026-04-04 22:09:47,067 - INFO - ✅ Datos guardados para Deathstroke
+2026-04-04 22:09:49,954 - INFO - ✅ Datos guardados para Demogoblin
+2026-04-04 22:09:52,848 - INFO - ✅ Datos guardados para Destroyer
+2026-04-04 22:09:55,645 - INFO - ✅ Datos guardados para Diamondback
+2026-04-04 22:09:58,439 - INFO - ✅ Datos guardados para DL Hawkins
+2026-04-04 22:09:59,811 - INFO - ✅ Datos guardados para Doc Samson
+2026-04-04 22:10:02,647 - INFO - ✅ Datos guardados para Doctor Doom
+2026-04-04 22:10:05,492 - INFO - ✅ Datos guardados para Doctor Doom II
+2026-04-04 22:10:08,304 - INFO - ✅ Datos guardados para Doctor Fate
+2026-04-04 22:10:11,254 - INFO - ✅ Datos guardados para Doctor Octopus
+2026-04-04 22:10:14,084 - INFO - ✅ Datos guardados para Doctor Strange
+2026-04-04 22:10:16,981 - INFO - ✅ Datos guardados para Domino
+2026-04-04 22:10:19,817 - INFO - ✅ Datos guardados para Donatello
+2026-04-04 22:10:22,681 - INFO - ✅ Datos guardados para Donna Troy
+2026-04-04 22:10:25,472 - INFO - ✅ Datos guardados para Doomsday
+2026-04-04 22:10:26,573 - INFO - ✅ Datos guardados para Doppelganger
+2026-04-04 22:10:29,346 - INFO - ✅ Datos guardados para Dormammu
+2026-04-04 22:10:32,100 - INFO - ✅ Datos guardados para Dr Manhattan
+2026-04-04 22:10:34,920 - INFO - ✅ Datos guardados para Drax the Destroyer
+2026-04-04 22:10:37,641 - INFO - ✅ Datos guardados para Ego
+2026-04-04 22:10:40,410 - INFO - ✅ Datos guardados para Elastigirl
+2026-04-04 22:10:43,229 - INFO - ✅ Datos guardados para Electro
+2026-04-04 22:10:46,010 - INFO - ✅ Datos guardados para Elektra
+2026-04-04 22:10:48,782 - INFO - ✅ Datos guardados para Elle Bishop
+2026-04-04 22:10:51,571 - INFO - ✅ Datos guardados para Elongated Man
+2026-04-04 22:10:54,290 - INFO - ✅ Datos guardados para Emma Frost
+2026-04-04 22:10:55,448 - INFO - ✅ Datos guardados para Enchantress
+2026-04-04 22:10:58,156 - INFO - ✅ Datos guardados para Energy
+2026-04-04 22:11:00,987 - INFO - ✅ Datos guardados para ERG-1
+2026-04-04 22:11:00,999 - INFO - 📊 Métricas ETL guardadas
