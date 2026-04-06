@@ -1,0 +1,56 @@
+# Kaleido 0.2.1
+# Kaleido es una librería de bajo nivel para la conversión de gráficos a formatos estáticos (PNG, JPG, SVG, PDF)
+# Se utiliza como motor de renderizado para Plotly, permitiendo exportar visualizaciones interactivas a imágenes
+kaleido==0.2.1
+
+# HTTP library for making API requests
+requests==2.31.0
+
+# Data manipulation and analysis
+pandas==2.2.0
+
+# Load environment variables from .env files
+python-dotenv==1.0.0
+
+# Plotting and visualization library
+matplotlib==3.8.0
+
+# Excel file reading and writing
+openpyxl==3.1.2
+
+# PostgreSQL database adapter
+psycopg2-binary==2.9.9
+
+# SQL toolkit and Object-Relational Mapping
+sqlalchemy==2.0.23
+
+# Database migration tool for SQLAlchemy
+alembic==1.12.1
+
+# Web framework for building data applications
+streamlit==1.28.1
+
+# Interactive plotting library
+plotly==5.17.0
+
+# Numerical computing library
+numpy==1.26.4
+
+# ── Nuevas dependencias para análisis estadístico ──
+# Jupyter Notebook and related tools for interactive computing
+jupyter==1.1.1
+
+# Jupyter Notebook server for creating and sharing documents with live code, equations, visualizations
+notebook==7.4.2
+
+# Machine learning library for Python, providing tools for classification, regression, clustering, etc.
+scikit-learn==1.6.1
+
+# Statistical modeling and econometrics library for Python
+statsmodels==0.14.4
+
+# Scientific computing library for Python, including optimization, integration, interpolation, etc.
+scipy==1.15.2
+
+# Statistical data visualization library based on matplotlib
+seaborn==0.13.2
