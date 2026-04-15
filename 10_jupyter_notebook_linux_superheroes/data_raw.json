@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "generado_en": "2026-04-15T00:14:07.390291",
+    "total_registros_historicos": 1000
+  },
+  "superheroes": [
+    {
+      "superhero_api_id": 152,
+      "nombre": "Captain Cold",
+      "stats": {
+        "inteligencia": 54,
+        "fuerza": 84,
+        "velocidad": 79,
+        "durabilidad": 69,
+        "poder": 69,
+        "combate": 88
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Alien",
+        "altura": "174 cm",
+        "peso": "68 kg"
+      }
+    },
+    {
+      "superhero_api_id": 153,
+      "nombre": "Captain Epic",
+      "stats": {
+        "inteligencia": 73,
+        "fuerza": 93,
+        "velocidad": 83,
+        "durabilidad": 84,
+        "poder": 82,
+        "combate": 85
+      },
+      "apariencia": {
+        "genero": "Female",
+        "raza": "Human",
+        "altura": "202 cm",
+        "peso": "100 kg"
+      }
+    },
+    {
+      "superhero_api_id": 154,
+      "nombre": "Captain Hindsight",
+      "stats": {
+        "inteligencia": 72,
+        "fuerza": 66,
+        "velocidad": 58,
+        "durabilidad": 91,
+        "poder": 85,
+        "combate": 78
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Alien",
+        "altura": "189 cm",
+        "peso": "99 kg"
+      }
+    },
+    {
+      "superhero_api_id": 155,
+      "nombre": "Captain Mar-vell",
+      "stats": {
+        "inteligencia": 70,
+        "fuerza": 60,
+        "velocidad": 54,
+        "durabilidad": 74,
+        "poder": 89,
+        "combate": 52
+      },
+      "apariencia": {
+        "genero": "Female",
+        "raza": "Alien",
+        "altura": "177 cm",
+        "peso": "116 kg"
+      }
+    },
+    {
+      "superhero_api_id": 156,
+      "nombre": "Captain Marvel",
+      "stats": {
+        "inteligencia": 57,
+        "fuerza": 84,
+        "velocidad": 81,
+        "durabilidad": 65,
+        "poder": 53,
+        "combate": 93
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Alien",
+        "altura": "195 cm",
+        "peso": "130 kg"
+      }
+    },
+    {
+      "superhero_api_id": 157,
+      "nombre": "Captain Marvel",
+      "stats": {
+        "inteligencia": 84,
+        "fuerza": 58,
+        "velocidad": 66,
+        "durabilidad": 71,
+        "poder": 72,
+        "combate": 51
+      },
+      "apariencia": {
+        "genero": "Female",
+        "raza": "Human",
+        "altura": "198 cm",
+        "peso": "121 kg"
+      }
+    },
+    {
+      "superhero_api_id": 158,
+      "nombre": "Captain Marvel II",
+      "stats": {
+        "inteligencia": 91,
+        "fuerza": 83,
+        "velocidad": 66,
+        "durabilidad": 93,
+        "poder": 68,
+        "combate": 64
+      },
+      "apariencia": {
+        "genero": "Female",
+        "raza": "Mutant",
+        "altura": "168 cm",
+        "peso": "102 kg"
+      }
+    },
+    {
+      "superhero_api_id": 159,
+      "nombre": "Captain Midnight",
+      "stats": {
+        "inteligencia": 85,
+        "fuerza": 58,
+        "velocidad": 70,
+        "durabilidad": 55,
+        "poder": 80,
+        "combate": 71
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Human",
+        "altura": "190 cm",
+        "peso": "120 kg"
+      }
+    },
+    {
+      "superhero_api_id": 79655,
+      "nombre": "Wonder Woman",
+      "stats": {
+        "inteligencia": 92,
+        "fuerza": 69,
+        "velocidad": 57,
+        "durabilidad": 87,
+        "poder": 78,
+        "combate": 81
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Human",
+        "altura": "199 cm",
+        "peso": "134 kg"
+      }
+    },
+    {
+      "superhero_api_id": 68910,
+      "nombre": "Flash",
+      "stats": {
+        "inteligencia": 69,
+        "fuerza": 86,
+        "velocidad": 87,
+        "durabilidad": 67,
+        "poder": 90,
+        "combate": 62
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Alien",
+        "altura": "193 cm",
+        "peso": "72 kg"
+      }
+    },
+    {
+      "superhero_api_id": 49498,
+      "nombre": "Iron Man",
+      "stats": {
+        "inteligencia": 87,
+        "fuerza": 58,
+        "velocidad": 86,
+        "durabilidad": 50,
+        "poder": 85,
+        "combate": 85
+      },
+      "apariencia": {
+        "genero": "Female",
+        "raza": "Mutant",
+        "altura": "186 cm",
+        "peso": "123 kg"
+      }
+    },
+    {
+      "superhero_api_id": 48970,
+      "nombre": "Spider-Man",
+      "stats": {
+        "inteligencia": 62,
+        "fuerza": 85,
+        "velocidad": 75,
+        "durabilidad": 70,
+        "poder": 72,
+        "combate": 75
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Human",
+        "altura": "176 cm",
+        "peso": "70 kg"
+      }
+    },
+    {
+      "superhero_api_id": 87272,
+      "nombre": "Hulk",
+      "stats": {
+        "inteligencia": 69,
+        "fuerza": 80,
+        "velocidad": 79,
+        "durabilidad": 71,
+        "poder": 88,
+        "combate": 75
+      },
+      "apariencia": {
+        "genero": "Male",
+        "raza": "Alien",
+        "altura": "190 cm",
+        "peso": "117 kg"
+      }
+    },
+    {
+      "superhero_api_id": 17735,
+      "nombre": "Thor",
+      "stats": {
+        "inteligencia": 75,
+        "fuerza": 74,
+        "velocidad": 54,
+        "durabilidad": 75,
+        "poder": 85,
+        "combate": 63
+      },
+      "apariencia": {
+        "genero": "Female",
+        "raza": "Human",
+        "altura": "180 cm",
+        "peso": "99 kg"
+      }
+    }
+  ]
+}
