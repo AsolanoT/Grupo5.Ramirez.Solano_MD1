@@ -6,7 +6,8 @@ ETL - ETAPA TRANSFORM
 
 - Lee superhéroes base desde data_raw.json
 - Genera registros históricos de powerstats
-- Produce exactamente N registros (ej. 1000)
+- Mantiene coherencia estadística entre variables
+- Poder se recalcula en función de otras variables
 
 NO consulta la BD
 --------------------------------------------------
@@ -15,6 +16,7 @@ NO consulta la BD
 import json
 from datetime import datetime, timedelta, timezone
 import random
+import numpy as np
 
 # ==================================================
 # LOGS INLINE
@@ -29,6 +31,26 @@ def log_info(msg):
 
 def log_ok(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] ✅ {msg}")
+
+# ==================================================
+# FUNCIONES AUXILIARES
+# ==================================================
+def limitar(valor):
+    return max(0, min(100, int(valor)))
+
+def calcular_poder(inteligencia, fuerza, velocidad, durabilidad, combate):
+    ruido = np.random.normal(0, 5)
+
+    poder = (
+        0.30 * fuerza +
+        0.25 * inteligencia +
+        0.20 * velocidad +
+        0.15 * durabilidad +
+        0.10 * combate +
+        ruido
+    )
+
+    return limitar(poder)
 
 # ==================================================
 # TRANSFORM
@@ -57,8 +79,23 @@ def transformar():
     # -------------------------------
     for i in range(total_historicos):
         hero = random.choice(superheroes)
-
         base = hero["stats"]
+
+        # 🔹 Variación realista (más amplia)
+        inteligencia = limitar(base["inteligencia"] + random.randint(-10, 10))
+        fuerza = limitar(base["fuerza"] + random.randint(-10, 10))
+        velocidad = limitar(base["velocidad"] + random.randint(-10, 10))
+        durabilidad = limitar(base["durabilidad"] + random.randint(-10, 10))
+        combate = limitar(base["combate"] + random.randint(-10, 10))
+
+        # 🔑 Poder recalculado correctamente
+        poder = calcular_poder(
+            inteligencia,
+            fuerza,
+            velocidad,
+            durabilidad,
+            combate
+        )
 
         registro = {
             "superhero": {
@@ -67,12 +104,12 @@ def transformar():
             },
             "apariencia": hero["apariencia"],
             "powerstats": [{
-                "inteligencia": max(0, min(100, base["inteligencia"] + random.randint(-3, 3))),
-                "fuerza": max(0, min(100, base["fuerza"] + random.randint(-3, 3))),
-                "velocidad": max(0, min(100, base["velocidad"] + random.randint(-3, 3))),
-                "durabilidad": max(0, min(100, base["durabilidad"] + random.randint(-3, 3))),
-                "poder": max(0, min(100, base["poder"] + random.randint(-3, 3))),
-                "combate": max(0, min(100, base["combate"] + random.randint(-3, 3))),
+                "inteligencia": inteligencia,
+                "fuerza": fuerza,
+                "velocidad": velocidad,
+                "durabilidad": durabilidad,
+                "poder": poder,
+                "combate": combate,
                 "fecha_extraccion": (
                     inicio - timedelta(minutes=i * 10)
                 ).isoformat()

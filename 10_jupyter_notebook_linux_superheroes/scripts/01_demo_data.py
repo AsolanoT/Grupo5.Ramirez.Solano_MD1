@@ -1,16 +1,10 @@
 #!/usr/bin/env python3
 """
-01_demo_data.py
---------------------------------------------------
-ETL - ETAPA EXTRACT
+01_demo_data.py (VERSIÓN MEJORADA)
 
-- Define superhéroes base (dimensión estable)
-- Genera data cruda para simular ingestión continua
-- El histórico real se genera en TRANSFORM
-
-NO consulta la BD
-NO inserta datos
---------------------------------------------------
+- Genera datos artificiales con relaciones reales
+- Poder depende de otras variables
+- Mantiene estructura ETL
 """
 
 import json
@@ -36,7 +30,7 @@ def log_ok(msg):
 # ==================================================
 rng = np.random.default_rng(seed=42)
 
-TOTAL_REGISTROS_HISTORICOS = 1000
+TOTAL_REGISTROS_HISTORICOS = 3000  # Número total de registros históricos a generar (1000 por héroe)
 
 SUPERHEROES_BASE = [
     {"superhero_api_id": 152, "nombre": "Captain Cold"},
@@ -56,23 +50,44 @@ SUPERHEROES_BASE = [
 ]
 
 # ==================================================
-# GENERACIÓN DE STATS BASE
+# GENERACIÓN DE STATS CON RELACIÓN REAL
 # ==================================================
 def generar_stats_base():
+    inteligencia = rng.integers(50, 95)
+    fuerza = rng.integers(50, 95)
+    velocidad = rng.integers(50, 95)
+    durabilidad = rng.integers(50, 95)
+    combate = rng.integers(50, 95)
+
+    # 🔑 Poder ahora depende de otras variables
+    ruido = rng.normal(0, 5)
+
+    poder = (
+        0.30 * fuerza +
+        0.25 * inteligencia +
+        0.20 * velocidad +
+        0.15 * durabilidad +
+        0.10 * combate +
+        ruido
+    )
+
+    # Limitar a rango realista
+    poder = int(np.clip(poder, 50, 100))
+
     return {
-        "inteligencia": int(rng.integers(50, 95)),
-        "fuerza": int(rng.integers(50, 95)),
-        "velocidad": int(rng.integers(50, 95)),
-        "durabilidad": int(rng.integers(50, 95)),
-        "poder": int(rng.integers(50, 95)),
-        "combate": int(rng.integers(50, 95)),
+        "inteligencia": int(inteligencia),
+        "fuerza": int(fuerza),
+        "velocidad": int(velocidad),
+        "durabilidad": int(durabilidad),
+        "poder": poder,
+        "combate": int(combate),
     }
 
 # ==================================================
 # EXTRACT
 # ==================================================
 def generar_data():
-    log_etapa("EXTRACT – Superhéroes base + 1000 registros históricos")
+    log_etapa("EXTRACT – Superhéroes base + datos coherentes")
 
     log_info(f"Superhéroes base: {len(SUPERHEROES_BASE)}")
     log_info(f"Registros históricos objetivo: {TOTAL_REGISTROS_HISTORICOS}")
@@ -105,7 +120,6 @@ def generar_data():
 
     log_ok("Data cruda generada correctamente")
     log_ok("Archivo: data_raw.json")
-    log_ok("Histórico será creado en etapa TRANSFORM")
 
 # ==================================================
 # MAIN
